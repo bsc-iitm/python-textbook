@@ -2,7 +2,7 @@
 
 <hr>
 <span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.3.html">Lesson-1.3</a>    
+    <a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.3.html">Lesson-1.3</a>    
 </span> 
 <hr>
 
@@ -90,8 +90,6 @@ In all the operations that we have seen so far, the operands have been literals.
 1 5
 ```
 
-
-
 ### Relational
 
 The following table gives the symbols for relational operators and the operations that they correspond to:
@@ -134,8 +132,6 @@ True
 
 The `==` symbol corresponds to the equality operator and should not be confused with `=`, the assignment operator.
 
-
-
 ### Logical
 
 The following table gives the logical operators and the operations that they correspond to:
@@ -170,8 +166,6 @@ False
 True
 ```
 
-
-
 ## Convention
 
 Consider the following lines of code:
@@ -191,8 +185,6 @@ Both lines 1 and 3 give the same output. Line-1 has a space before and after the
 # But both conventions are valid
 ```
 
-
-
 ## Expressions
 
 An expression is some combination of literals, variables and operators. For example, the following are expressions:
@@ -206,8 +198,6 @@ Each expression evaluates to some value. This value has a type. In the above exa
 
 - Arithmetic: an expression whose type is either `int` or `float`
 - Boolean: an expression whose type is `bool`
-
-
 
 ## Type of Expressions
 
@@ -255,8 +245,6 @@ We see that the result is `3.0` which is of type `float`. The conclusion is that
 
 All the operations result in a `float`. From this we see that `float` is more dominant than `int`, irrespective of the operator involved.
 
-
-
 ### Boolean Expressions
 
 Expressions that involve a relational operator will result in a `bool`. For example:
@@ -291,6 +279,3 @@ We can take the help of a concept called **truth table** to analyze the outcomes
 | `True`  | `False` | `True`   |
 | `False` | `True`  | `True`   |
 | `False` | `False` | `False`  |
-
-
-
