@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.1.html">Lesson-1.1</a>    
-</span> 
-<hr> 
-
 # Lesson-0
-
-[TOC]
 
 ## Why learn Python?
 
