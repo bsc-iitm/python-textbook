@@ -155,19 +155,20 @@ False
 >>> not(x)
 True
 ```
+
 !!! info "Convention"
 
     Consider the following lines of code:
-
+    
     ```python
     >>> print(1 + 2)
     3
     >>> print(1+2)
     3
     ```
-
+    
     Both lines 1 and 3 give the same output. Line-1 has a space before and after the `+` operator, while line-3 doesn't. Both ways are syntactically correct. In this course, we will be following the first convention: there is always a space separating the operator from the operands. This is also true for the `=` operator.
-
+    
     ```python
     >>> x = 2 # We will follow this
     >>> x=2   # We will NOT follow this

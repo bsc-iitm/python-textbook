@@ -1,16 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.4.html">Lesson-1.4</a>    
-</span> 
-<hr> 
-
 # Lesson-1.3
-
-[TOC]
-
-<div style="page-break-after: always; break-after: page;"></div>
 
 ## Arithmetic Expressions
 
@@ -32,7 +20,23 @@ Clearly, we see that the interpreter is following the first way. When an express
 
 In general, the following table describes the precedence rules for operators. Those with higher precedence come at the top of the table. Operators in a given cell have the same precedence. For example, `+` and `-` have same precedence.
 
-<img src="../assets/images/img-012.png" style="zoom:100%;" />
+<img src="/assets/images/img-012.png" style="zoom:100%;" />
+<script type="text/tikz">
+  \newcommand\tikzmark[1]{%
+    \tikz[overlay,remember picture] \coordinate (#1);}
+  \noindent\begin{tabular}{|l|l|}
+  \hline
+  Operators    & Operation                                         \tikzmark{start} \\ \hline  
+  **           & exponentiation                                    \\ \hline
+  +x, -x       & unary + (positive sign), unary - (negative sign)  \\ \hline
+  *, /, //, \% & multiplication, division, floor division, modulus \\ \hline
+  +, -         & addition, subtraction                            \tikzmark{end} \\ \hline 
+  \end{tabular}
+
+  \begin{tikzpicture}[overlay,remember picture]
+  \draw[->] let \p1=(start), \p2=(end) in ($(\x1,\y1)+(6.5,0.2)$) -- node[label=right:precedence] {} ($(\x1,\y2)+(6.5,0)$);
+  \end{tikzpicture}
+</script>
 
 Let us take another example:
 
@@ -153,7 +157,7 @@ As an exercise, try the following:
 
 Similar to arithmetic operators, logical operators also have precedence. Boolean expressions are also going to evaluated from left to right:
 
-<img src="../assets/images/img-013.png" style="zoom:100%;" />
+<img src="/assets/images/img-013.png" style="zoom:100%;" />
 
 To see this rule in action, consider the following example:
 
@@ -252,7 +256,7 @@ False
 
 Let us break this down using the diagram given below. The arrows on the left give us an idea of the expression that has to be evaluated first. If we keep following the arrows, the last expression in this image on the bottom-left is the first to be evaluated. By following the arrows on the right, we can see that the two offending expressions - `5 / 0` and `10 / 0` - are never evaluated.
 
-<img src="../assets/images/img-014.png" style="zoom:80%;" />
+<img src="/assets/images/img-014.png" style="zoom:80%;" />
 
 
 
