@@ -1,14 +1,6 @@
-<img src="../assets/images/logo.png" width=30% />
+ 
+ # Lesson-1.3
 
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.4.html">Lesson-1.4</a>    
-</span> 
-<hr> 
-
-# Lesson-1.3
-
-[TOC]
 
 <div style="page-break-after: always; break-after: page;"></div>
 

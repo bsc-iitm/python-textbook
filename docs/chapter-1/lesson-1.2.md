@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-    <a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.3.html">Lesson-1.3</a>    
-</span> 
-<hr>
-
 # Lesson-1.2
-
-[TOC]
 
 ## Operators
 
@@ -16,7 +6,7 @@
 
 The anatomy of an operation is given below:
 
-<img src="../assets/images/img-011.png" style="zoom:80%;" />
+<img src="/assets/images/img-011.png" style="zoom:80%;" />
 
 The following table gives the symbols for arithmetic operators and the operations that they correspond to:
 
@@ -165,25 +155,34 @@ False
 >>> not(x)
 True
 ```
+!!! info "Convention"
 
-## Convention
+    Consider the following lines of code:
 
-Consider the following lines of code:
+    ```python
+    >>> print(1 + 2)
+    3
+    >>> print(1+2)
+    3
+    ```
 
-```python
->>> print(1 + 2)
-3
->>> print(1+2)
-3
-```
+    Both lines 1 and 3 give the same output. Line-1 has a space before and after the `+` operator, while line-3 doesn't. Both ways are syntactically correct. In this course, we will be following the first convention: there is always a space separating the operator from the operands. This is also true for the `=` operator.
 
-Both lines 1 and 3 give the same output. Line-1 has a space before and after the `+` operator, while line-3 doesn't. Both ways are syntactically correct. In this course, we will be following the first convention: there is always a space separating the operator from the operands. This is also true for the `=` operator.
+    ```python
+    >>> x = 2 # We will follow this
+    >>> x=2   # We will NOT follow this
+    # But both conventions are valid
+    ```
 
-```python
->>> x = 2 # We will follow this
->>> x=2   # We will NOT follow this
-# But both conventions are valid
-```
+!!! info "Operator Chaining"
+    Python supports chaining relational operators. This enables you to evaluate chains of comparison without having to use logical operators. 
+    ```python
+    >>> 10 < 11 <= 12
+    True
+    # is the same as
+    >>> 10 < 11 and 11 <= 12
+    True
+    ```
 
 ## Expressions
 

@@ -1,36 +1,28 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-    <a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.2.html">Lesson-1.2</a>    
-</span> 
-<hr>
-
 # Lesson-1.1
-
-[TOC]
 
 ## Python shell | Replit Console
 
 In this lesson, we will be working with the Python interpreter in Interactive Mode. TIt is also often called the Python shell. It is a tool that lets us execute individual lines of code and see the output right away. We will drop the phrase "interactive mode" and just refer to it as the interpreter. Have a look at the official Python documentation for more details about the [Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html). If you have Python installed on your system, then the Python shell will look like this:
 
-<img title="" src="../assets/images/img-001.png" alt="image-20210310105155189" style="zoom:80%;" data-align="center">
+<p align="center">
+  <img title="" src="/assets/images/img-001.png" alt="image-20210310105155189" style="zoom:80%;" data-align="center">
+</p>
 
 In Replit, this corresponds to the console screen on the right of the repl. This will be our playground for quite sometime:
 
 <video controls loop autoplay muted>
-    <source src="../assets/videos/prompt.mp4" type="video/mp4" zoom=50%>
+    <source src="/assets/videos/prompt.mp4" type="video/mp4" zoom=50%>
 </video>
 
 ## Prompts
 
-<img title="" src="../assets/images/img-003.png" alt="" style="zoom:100%;" data-align="center">
+<img title="" src="/assets/images/img-003.png" alt="" style="zoom:100%;" data-align="center">
 
 The orange symbol that is displayed above is called a prompt. Its role is similar to that of the blinking cursor while editing documents. It is an invitation to type code. Code that is typed at the prompt is executed by the interpreter. In these lessons, we will use the following symbol to refer to the prompt: `>>>`.
 
 We are all set to write our first line of code:
 
-```python
+```py
 >>> print('Hello World!')
 Hello World!
 ```
@@ -107,9 +99,18 @@ The interpreter hits back with a `SyntaxError`. Like human languages, programmin
 
 Before we jump into the serious stuff, let us try and print some emojis!
 
-<img src="../assets/images/img-023.png" style="zoom:80%;" />
+```py
+>>> print('\N{smiling face with smiling eyes}')
+😊
+>>> print('\N{grinning face}')
+😀
+>>> print('\N{smiling face with halo}')
+😇
+>>> print('\N{thinking face}')
+🤔
+```
 
-Try this out in your repl! A full list of emojis can be found [here](https://unicode.org/emoji/charts/full-emoji-list.html).
+Try this out in an interpreter of your choice! A full list of emojis can be found [here](https://unicode.org/emoji/charts/full-emoji-list.html).
 
 ## Literals and Variables
 
