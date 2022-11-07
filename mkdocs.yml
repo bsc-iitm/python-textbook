@@ -1,7 +1,7 @@
 site_name: Python Textbook
 theme:
   name: material
-  logo: assets/images/logo.png
+  logo: assets/images/logo.svg
   palette:
 
     # Palette toggle for light mode
