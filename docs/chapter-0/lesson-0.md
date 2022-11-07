@@ -2,10 +2,9 @@
 
 ## Why learn Python?
 
-The strongest reason is utility. Python powers a number of applications and is used by companies like Google, Netflix, Dropbox, Quora. A closely related reason is popularity. If a language is popular in the developer community, then there must be something good about it. In a recent [survey](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) conducted by the company StackOverflow, Python was rated as the third most loved language.
+The strongest reason is utility. Python powers a large number of applications and is used by companies like Google, Netflix, Dropbox, Quora. A closely related reason is popularity. If a language is popular in the developer community, then there must be something good about it. In a recent [survey](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) conducted by the company StackOverflow, Python was rated as the third most loved language.
 
-<img src="/assets/images/img-016.png" style="zoom:80%;" />
-<img src="/assets/images/img-016.png" style="zoom:80%;" />
+![Stackoverflow survey](../assets/images/img-016.png)
 
 Around 66% of the 65,000 developers who responded to the survey are currently developing with Python and have expressed interest in continuing to develop with it. Another strong reason to learn Python is that it lets us create beautiful things such as this animation:
 
@@ -72,11 +71,7 @@ However, if you wish to use Python on your system, you can install it from [here
 
 Python first appeared on the programming landscape 30 years ago, in February 1991. It was created as a hobby project by a Dutch programmer, Guido van Rossum. He served as the “[benevolent dictator for life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life)” of Python’s development until 2018, when he stepped down from the post.
 
-<<<<<<< HEAD
 <img title="" src="../assets/images/guido.jpg" alt="" style="zoom:60%;" data-align="center">
-=======
-<img src="/assets/images/guido.jpg" style="zoom:60%;" />
->>>>>>> 08a7bfa7bfb2fdcb2c7c1295f72f459a7a15bb12
 
 Image-Source: [Wikipedia](https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido-portrait-2014-drc.jpg)
 
