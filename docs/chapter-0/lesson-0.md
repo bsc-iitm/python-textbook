@@ -3,22 +3,29 @@
 ## Why learn Python?
 
 The strongest reason is utility. Python powers a large number of applications and is used by companies like Google, Netflix, Dropbox, Quora. A closely related reason is popularity. If a language is popular in the developer community, then there must be something good about it. In a recent [survey](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) conducted by the company StackOverflow, Python was rated as the third most loved language.
+ 
 
 ![Stackoverflow survey](../assets/images/img-016.png)
 
 Around 66% of the 65,000 developers who responded to the survey are currently developing with Python and have expressed interest in continuing to develop with it. Another strong reason to learn Python is that it lets us create beautiful things such as this animation:
 
-<video controls loop autoplay muted>
-    <source src="/assets/videos/sinx.mp4" type="video/mp4" zoom=50%>
-</video>
+![type:video](../assets/videos/sinx.mp4)
 
 Thanks to [Manim Community](https://docs.manim.community/en/v0.4.0/examples.html#special-camera-settings) for the source code. The code that was used to render this animation can be found [here](https://github.com/pypod/pypod.github.io/blob/main/code/lesson_0.py).
 
-Any interesting fact about pyhon is if you import antigravity in IDLE then opens up this [amazing comic.](https://xkcd.com/353/)
-
-<img src="https://imgs.xkcd.com/comics/python.png" title="" alt="" data-align="center">
-
 Being able to create something like this is the end goal of this course. Musicians create music; musical instruments are their tools. Painters create paintings; the brush and the canvas are their tools. Coders create software; programming languages are their tools. Python is one of the most versatile and accessible languages.  We will start from the basics and systematically cover the important aspects of the language. 
+
+!!! info "How easy is Python?"
+    Python has a vast collection of libraries that makes it easy to implement complex tasks. This is well described by this amazing comic that pops up when you enter `import antigravity` in IDLE.
+
+
+    <div style="display: flex; justify-content: center">
+        ![Python Web comic](https://imgs.xkcd.com/comics/python.png)
+    </div>
+
+    *Credit to [xkcd.com](https://xkcd.com/353) for the comic*
+
+
 
 ## Lessons
 
@@ -71,7 +78,7 @@ However, if you wish to use Python on your system, you can install it from [here
 
 Python first appeared on the programming landscape 30 years ago, in February 1991. It was created as a hobby project by a Dutch programmer, Guido van Rossum. He served as the “[benevolent dictator for life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life)” of Python’s development until 2018, when he stepped down from the post.
 
-<img title="" src="../assets/images/guido.jpg" alt="" style="zoom:60%;" data-align="center">
+![Guido Van Rossum](../assets/images/guido.jpg)
 
 Image-Source: [Wikipedia](https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido-portrait-2014-drc.jpg)
 
