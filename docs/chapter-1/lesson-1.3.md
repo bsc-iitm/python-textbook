@@ -1,6 +1,4 @@
- 
- # Lesson-1.3
-
+# Lesson-1.3
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -24,7 +22,7 @@ Clearly, we see that the interpreter is following the first way. When an express
 
 In general, the following table describes the precedence rules for operators. Those with higher precedence come at the top of the table. Operators in a given cell have the same precedence. For example, `+` and `-` have same precedence.
 
-<img src="../assets/images/img-012.png" style="zoom:100%;" />
+<img src="/assets/images/img-012.png" style="zoom:100%;" />
 
 Let us take another example:
 
@@ -39,8 +37,6 @@ Going by the precedence rules, we apply the parenthesis in the following sequenc
 2. `((3 ** 2) * 4) - 4`
 
 This is evaluated as: `((3 ** 2) * 4) - 4 = (9 * 4) - 4 = 36 - 4 = 32` 
-
-
 
 ### Order
 
@@ -85,6 +81,7 @@ Run the following code in the interpreter. Which of the following parenthesizati
 >>> (8 % 4) % 2
 >>> 8 % (4 % 2)
 ```
+
 Finally, `**` is a unique operator in this regard:
 
 ```python
@@ -98,8 +95,6 @@ The two ways of doing this are:
 - `2 ** (3 ** 0)`
 
 The interpreter is following the second way, i.e., the statement is being executed from right to left. This kind of execution happens only in the case of the exponentiation operator and the assignment operator.
-
-
 
 ## Boolean expressions
 
@@ -139,13 +134,11 @@ As an exercise, try the following:
 >>> False or False or False or False or True
 ```
 
-
-
 ### Precedence and Order
 
 Similar to arithmetic operators, logical operators also have precedence. Boolean expressions are also going to evaluated from left to right:
 
-<img src="../assets/images/img-013.png" style="zoom:100%;" />
+<img src="/assets/images/img-013.png" style="zoom:100%;" />
 
 To see this rule in action, consider the following example:
 
@@ -172,8 +165,6 @@ There are two different parenthesizations:
 - `True or (False and False) = True or False = True`
 
 According to the precedence rules, `and` has greater precedence than `or`. So, the second way is the one followed by Python.
-
-
 
 ### Beware of `float`!
 
@@ -209,9 +200,7 @@ Let us see what is happening here by starting with the expression to the left of
 
 **Note**: The following explanation can be skipped.
 
-The problem is with the way `0.1` is represented in binary - it has a non-terminating, recurring sequence of bits after the decimal point. As the computer uses a finite number of bits to represent data, this sequence will be truncated at some stage. This results in an approximate representation of `0.1`. For a more detailed explanation, refer to [this](https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/#:~:text=For%20example%2C%20in%20half%2Dprecision,which%20is%200.0999755859375%20in%20decimal.) resource.
-
-
+The problem is with the way `0.1` is represented in binary - it has a non-terminating, recurring sequence of bits after the decimal point. As the computer uses a finite number of bits to represent data, this sequence will be truncated at some stage. This results in an approximate representation of `0.1`. For a more detailed explanation, refer to <a href="https://www.exploringbinary.com/why-0-point-1-does-not-exist-in-floating-point/#:~:text=For%20example%2C%20in%20half%2Dprecision,which%20is%200.0999755859375%20in%20decimal" target=_blank>this</a> resource.
 
 ### Short Circuit Evaluation
 
@@ -244,7 +233,4 @@ False
 
 Let us break this down using the diagram given below. The arrows on the left give us an idea of the expression that has to be evaluated first. If we keep following the arrows, the last expression in this image on the bottom-left is the first to be evaluated. By following the arrows on the right, we can see that the two offending expressions - `5 / 0` and `10 / 0` - are never evaluated.
 
-<img src="../assets/images/img-014.png" style="zoom:80%;" />
-
-
-
+<img src="/assets/images/img-014.png" style="zoom:80%;" />

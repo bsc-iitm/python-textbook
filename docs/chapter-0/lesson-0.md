@@ -8,7 +8,6 @@ The strongest reason is utility. Python powers a number of applications and is u
 <img src="../assets/images/img-016.png" style="zoom:80%;" />
 =======
 
-
 <img src="/assets/images/img-016.png" style="zoom:80%;" />
 >>>>>>> 08a7bfa7bfb2fdcb2c7c1295f72f459a7a15bb12
 
@@ -81,7 +80,8 @@ Python first appeared on the programming landscape 30 years ago, in February 199
 <img title="" src="../assets/images/guido.jpg" alt="" style="zoom:60%;" data-align="center">
 =======
 <img src="/assets/images/guido.jpg" style="zoom:60%;" />
->>>>>>> 08a7bfa7bfb2fdcb2c7c1295f72f459a7a15bb12
+
+> > > > > > > 08a7bfa7bfb2fdcb2c7c1295f72f459a7a15bb12
 
 Image-Source: [Wikipedia](https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido-portrait-2014-drc.jpg)
 

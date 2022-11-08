@@ -2,7 +2,7 @@
 
 ## Python shell | Replit Console
 
-In this lesson, we will be working with the Python interpreter in Interactive Mode. TIt is also often called the Python shell. It is a tool that lets us execute individual lines of code and see the output right away. We will drop the phrase "interactive mode" and just refer to it as the interpreter. Have a look at the official Python documentation for more details about the [Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html). If you have Python installed on your system, then the Python shell will look like this:
+In this lesson, we will be working with the Python interpreter in Interactive Mode. It is also often called the Python shell. It is a tool that lets us execute individual lines of code and see the output right away. We will drop the phrase "interactive mode" and just refer to it as the interpreter. Have a look at the official Python documentation for more details about the <a href="https://docs.python.org/3/tutorial/interpreter.html" target=:_blank>Python Interpreter </a>. If you have Python installed on your system, then the Python shell will look like this:
 
 <p align="center">
   <img title="" src="/assets/images/img-001.png" alt="image-20210310105155189" style="zoom:80%;" data-align="center">
@@ -27,7 +27,7 @@ We are all set to write our first line of code:
 Hello World!
 ```
 
-Fire up a repl and type the code in the console. You should be getting the output on the next line.
+Fire up a repl and type the code in the console. You will be getting the output on the next line.
 
 ## Output
 
@@ -110,7 +110,7 @@ Before we jump into the serious stuff, let us try and print some emojis!
 🤔
 ```
 
-Try this out in an interpreter of your choice! A full list of emojis can be found [here](https://unicode.org/emoji/charts/full-emoji-list.html).
+Try this out in an interpreter of your choice! A full list of emojis can be found <a href="https://unicode.org/emoji/charts/full-emoji-list.html" target="_blank">here</a>.
 
 ## Literals and Variables
 
