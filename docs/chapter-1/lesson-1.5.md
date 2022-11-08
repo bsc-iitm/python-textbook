@@ -1,14 +1,6 @@
-<img src="../assets/images/logo.png" width=30% />
 
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-1/lesson-1.6.html">Lesson-1.6</a>    
-</span> 
-<hr> 
 
 # Lesson-1.5
-
-[TOC]
 
 ## Strings
 
@@ -165,15 +157,15 @@ True
 True
 ```
 
-It is clear from the above examples that the length of the string is not a metric used by Python to compare strings. Instead, Python uses the familiar alphabetical ordering to compare two strings. More precisely it employs what is known as [lexicographic ordering](https://docs.python.org/3/tutorial/datastructures.html#comparing-sequences-and-other-types):
+It is clear from the above examples that the length of the string is not a metric used by Python to compare strings. Instead, Python uses the familiar alphabetical ordering to compare two strings. More precisely it employs what is known as <a href="https://docs.python.org/3/tutorial/datastructures.html#comparing-sequences-and-other-types" target=_blank>lexicographic ordering</a>:
 
 > **Lexicographic ordering**
 >
 > The first characters from the two strings are compared. If they differ this determines the outcome of the comparison. If they are equal, then the second character of both the strings are compared. This process continues until either string is exhausted.
 
-This leads to another question. How does Python compare two characters? The answer is given in one of Python's [official tutorials](https://docs.python.org/3/howto/unicode.html#):
+This leads to another question. How does Python compare two characters? The answer is given in one of Python's <a href="https://docs.python.org/3/howto/unicode.html#" target=_blank>official tutorials</a>:
 
-Python’s string type uses the Unicode standard for representing characters, which lets Python programs work with different possible characters. What is the Unicode standard? [Unicode](https://www.unicode.org/) is a specification that aims to list every character used by human languages and give each character its own unique code. The Unicode standard describes how characters are represented by **code points**. Another unfamiliar term. What is a code point? A code point value is an integer. Lexicographical ordering for strings uses the Unicode code point number to order individual characters.
+Python’s string type uses the Unicode standard for representing characters, which lets Python programs work with different possible characters. What is the Unicode standard? <a href="https://www.unicode.org/" target=_blank>Unicode</a> is a specification that aims to list every character used by human languages and give each character its own unique code. The Unicode standard describes how characters are represented by **code points**. Another unfamiliar term. What is a code point? A code point value is an integer. Lexicographical ordering for strings uses the Unicode code point number to order individual characters.
 
 Python provides a built-in function called `ord` that returns the code point of any given character. For example:
 
@@ -239,7 +231,7 @@ This gives the output:
 India's capital is New Delhi
 ```
 
-Now remove the backslash from the above string and try to print it. You will be getting an error. Why do you think that happens?
+Now remove the backslash from the above string and try to print it. You will get an error. Why do you think that happens?
 
 
 

@@ -2,14 +2,14 @@
 
 ## Operators
 
-### Arithmetic
+### Arithmetic Operators
 
 The anatomy of an operation is given below:
 
 <img src="/assets/images/img-011.png" style="zoom:80%;" />
 
 The following table gives the symbols for arithmetic operators and the operations that they correspond to:
-
+<div style="display: flex; justify-content: center;" markdown>
 | Operator | Operation      |
 | -------- | -------------- |
 | +        | Addition       |
@@ -19,7 +19,7 @@ The following table gives the symbols for arithmetic operators and the operation
 | //       | Floor division |
 | %        | Modulus        |
 | **       | Exponentiation |
-
+</div>
 All the operators in the above table are binary, i.e., they operate on two operands. Let us now take a look at each operator:
 
 ```python
@@ -80,10 +80,10 @@ In all the operations that we have seen so far, the operands have been literals.
 1 5
 ```
 
-### Relational
+### Relational Operators
 
 The following table gives the symbols for relational operators and the operations that they correspond to:
-
+<div style="display: flex; justify-content: center;" markdown>
 | Operator | Operation                |
 | -------- | ------------------------ |
 | >        | greater than             |
@@ -92,7 +92,7 @@ The following table gives the symbols for relational operators and the operation
 | <=       | less than or equal to    |
 | ==       | double equal to          |
 | !=       | not equal to             |
-
+</div>
 All the operators in the above table are binary. Let us now take a look at each of them:
 
 ```python
@@ -122,16 +122,17 @@ True
 
 The `==` symbol corresponds to the equality operator and should not be confused with `=`, the assignment operator.
 
-### Logical
+### Logical Operators
 
 The following table gives the logical operators and the operations that they correspond to:
 
+<div style="display: flex; justify-content: center;" markdown>
 | Operator | Operation           |
 | -------- | ------------------- |
 | not      | negation            |
 | and      | logical conjunction |
 | or       | logical disjunction |
-
+</div>
 `and` and `or` are binary operators; `not` is a unary operator. Let us now take a look at each of them:
 
 ```python
@@ -175,7 +176,8 @@ True
     # But both conventions are valid
     ```
 
-!!! info "Operator Chaining"
+### Operator Chaining
+
     Python supports chaining relational operators. This enables you to evaluate chains of comparison without having to use logical operators. 
     ```python
     >>> 10 < 11 <= 12
@@ -199,7 +201,7 @@ Each expression evaluates to some value. This value has a type. In the above exa
 - Arithmetic: an expression whose type is either `int` or `float`
 - Boolean: an expression whose type is `bool`
 
-## Type of Expressions
+## Types of Expressions
 
 ### Arithmetic Expressions
 
@@ -265,17 +267,18 @@ False
 <class 'bool'>
 ```
 
-One way to analyze the outcome of boolean expressions that involve variables is to exhaustively list down the different combinations of values that variables can take and evaluate the expression for each such combination. For example, assume that `X` and `Y` are two boolean variables. Now, consider the following expression:
+One way to analyze the outcome of boolean expressions that involve variables is to exhaustively list down the different combinations of values that variables can take and evaluate the expression for each such combination. For example, assume that X and Y are two boolean variables. Now, consider the following expression:
 
 ```python
 >>> X or Y
 ```
 
 We can take the help of a concept called **truth table** to analyze the outcomes:
-
-| `X`     | `Y`     | `X or Y` |
+<div style="display: flex; justify-content: center;" markdown>
+|   X     |   Y     |  X or Y  |
 | ------- | ------- | -------- |
-| `True`  | `True`  | `True`   |
-| `True`  | `False` | `True`   |
-| `False` | `True`  | `True`   |
-| `False` | `False` | `False`  |
+|  True   |  True   |  True    |
+|  True   |  False  |  True    |
+|  False  |  True   |  True    |
+|  False  |  False  |  False   |
+</div>

@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-2/lesson-2.1.html">Lesson-2.1</a>   
-</span> 
-<hr>
-
 # Lesson-1.6
-
-[TOC]
 
 ## Strings
 
@@ -18,6 +8,7 @@ We looked at string operations in the previous lesson. A quick recap of what we 
 - Concatenation of two strings using the `+` operator
 - Replication of strings using the `*` operator
 - String comparison using relational operators such as `>, <, ==`
+- Use of `in` keyword
 
 In this lesson, we will explore the sequential nature of strings. This will also serve as an introduction to lists in Python. In addition, we will also look at string methods.
 
@@ -27,9 +18,9 @@ In this lesson, we will explore the sequential nature of strings. This will also
 
 A string is a sequence of characters. Sequences support indexing. What do we mean by that? Consider the following image:
 
-<img src="../assets/images/img-027.png" style="zoom:70%;" />
+<img src="/assets/images/img-027.png" style="zoom:70%;" />
 
-Given a word such as "world", we say that 'w' is the first letter in the word, 'o' is the second letter and so on. What we are referring to is the position of the letter in the word. The "index" is just a formal way of denoting the position of an element in the sequence. In computer science, starting the index from 0 is a widespread convention. This is called [zero-based numbering](https://en.wikipedia.org/wiki/Zero-based_numbering).
+Given a word such as "world", we say that 'w' is the first letter in the word, 'o' is the second letter and so on. What we are referring to is the position of the letter in the word. The "index" is just a formal way of denoting the position of an element in the sequence. In computer science, starting the index from 0 is a widespread convention. This is called <a href="https://en.wikipedia.org/wiki/Zero-based_numbering" target=_blank>zero-based numbering</a>.
 
 Once this is defined, we can go ahead and access characters that are at a given position in a string:
 
@@ -85,11 +76,11 @@ Python supports negative indexing. This can be best understood using the followi
 
 
 
-<img src="../assets/images/img-028.png" style="zoom:70%;" />
+<img src="/assets/images/img-028.png" style="zoom:70%;" />
 
 Think about it as follows. You keep moving down a flight of stairs starting from the top most step. When you reach the last step, you think that you cannot go down any further. At that moment, some invisible hand magically transports you back to the top most step and you begin your descent all over again. A good image that captures this analogy is the Penrose stairs:
 
-<img src="../assets/images/img-029.png" style="zoom:40%;" />
+<img src="/assets/images/img-029.png" style="zoom:40%;" />
 
 Image credit: [Wikipedia](https://en.wikipedia.org/wiki/Penrose_stairs#/media/File:Impossible_staircase.svg)
 
@@ -108,6 +99,8 @@ Unlike the Penrose stairs, we cannot keep repeating this forever. `print(word[-6
 
 ### Slicing
 
+Slicing is a way of extracting a substring from a string using the slice() function.
+
 Assume that you have a collection of email ids of students in IIT-M. Let us say all email ids are of this form:
 
 > branch_year_number@iitm.ac.in
@@ -122,7 +115,7 @@ BT_17_001@iitm.ac.in
 
 Given a string, we would like to extract the roll number of the student from it. How do we do this? Python provides a way to extract this information using the concept of slicing:
 
-<img src="../assets/images/img-030.png" style="zoom:40%;" />
+<img src="/assets/images/img-030.png" style="zoom:40%;" />
 
 ```python
 email = 'CS_10_014@iitm.ac.in'
@@ -161,7 +154,7 @@ print(domain)
 
 This outputs `iitm.ac.in`. Think for a while about the output. It is just a combination of negative indexing and slicing. Use the following visual to get a better understanding of slicing:
 
-<img src="../assets/images/img-031.png" style="zoom:60%;" />
+<img src="/assets/images/img-031.png" style="zoom:60%;" />
 
 Using the above visual, we can now very easily process the following slices:
 
@@ -193,7 +186,7 @@ word = 'Some string'
 
 Here, we are not modifying the variable `word` in-place. Instead, we are assigning it an entirely new string literal in line-2. Thus there are two different string literals -  `'some string'` and `'Some string'` - and the former has NOT been transformed into the latter.
 
-<img src="../assets/images/img-032.png" style="zoom:50%;" />
+<img src="/assets/images/img-032.png" style="zoom:50%;" />
 
 The number on the arrow represents the line number in the code. `word` binds to the string on top after line-1. `word` binds to the string on the bottom after line-2. Note that there are two different strings here; one doesn't transform into the other. The concept of mutable and immutable objects will be explored in considerable detail in chapter-5.
 
@@ -236,7 +229,7 @@ valid = name.isalpha()
 print(valid)
 ```
 
-`name.isalpha()` returns a boolean value. If every character in the string is an alphabet and the string is non-empty, it returns `True`, and `False` otherwise. A comprehensive list of string methods can be found [here](https://docs.python.org/3/library/stdtypes.html#string-methods).
+`name.isalpha()` returns a boolean value. If every character in the string is an alphabet and the string is non-empty, it returns `True`, and `False` otherwise. A comprehensive list of string methods can be found <a href="https://docs.python.org/3/library/stdtypes.html#string-methods" target=_blank>here</a>.
 
 
 
