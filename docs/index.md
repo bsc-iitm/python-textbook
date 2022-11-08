@@ -300,7 +300,7 @@ Mathematics and Programming
     - `write`
     - `writelines`
 
-[Lesson-7.5](chapter-7/lesson-7.6.md)
+[Lesson-7.5](chapter-7/lesson-7.5.md)
 
 - File Handling
   - CSV files
