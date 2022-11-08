@@ -1,7 +1,5 @@
 # Lesson-1.3
 
-<div style="page-break-after: always; break-after: page;"></div>
-
 ## Arithmetic Expressions
 
 ### Precedence
