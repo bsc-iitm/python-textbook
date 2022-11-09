@@ -1,16 +1,5 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-3/lesson-3.1.html">Lesson-3.1</a>    
-</span> 
-<hr> 
-
 # Lesson-2.4
-
-
-[TOC]
-
+ 
 ## Library
 
 A library is a collection of functions that share a common theme. This is a loose definition and will become clear when we start working with a library.
@@ -40,9 +29,9 @@ Mo Tu We Th Fr Sa Su
 25 26 27 28 29 30 31
 ```
 
-15th of August falls on a Friday. Isn't that lovely? It took just two lines of code! `calendar` is one among several libraries in Python's standard library. A comprehensive list can be found [here](https://docs.python.org/3/library/). Going back to the code, `calendar` is the name of the library and `import` is the keyword used to include this library as a part of the code.
+15th of August falls on a Friday. Isn't that lovely? It took just two lines of code! `calendar` is one among several libraries in Python's standard library. A comprehensive list can be found [here](https://docs.python.org/3/library/). Going back to the code, `calendar` is the name of the library and `#!py import` is the keyword used to include this library as a part of the code.
 
-`calendar` is a collection of functions that are related to calendars. `prmonth` is one such function. It accepts `<year>` and `<month>`, as input and displays the calendar for `<month>` in the year `<year>`. If we want to use a function in `calendar`, we must first import the library. Let us see what happens if skip this step:
+`calendar` is a collection of functions that are related to calendars. `#!py prmonth()` is one such function. It accepts `<year>` and `<month>`, as input and displays the calendar for `<month>` in the year `<year>`. If we want to use a function in `calendar`, we must first import the library. Let us see what happens if skip this step:
 
 ```python
 # import calendar
@@ -51,7 +40,7 @@ calendar.prmonth(3000, 8)
 
 It gives the following error:
 
-```
+```pycon
 NameError: name 'calendar' is not defined
 ```
 
@@ -86,7 +75,8 @@ The output of the above code is `4`. Days are mapped to numbers as follows:
 
 Let us now try to answer this hypothetical question:
 
-> You are stranded on an island in the middle of the Indian Ocean. The island has a computing device that has just one application installed in it: a Python interpreter. You wish to know the current date and time.
+!!! question "Problem" 
+    You are stranded on an island in the middle of the Indian Ocean. The island has a computing device that has just one application installed in it: a Python interpreter. You wish to know the current date and time.
 
 **Solution**
 
@@ -149,7 +139,7 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
-These are some nuggets of wisdom from Tim Peters, a "major contributor to the Python programming language" [[refer](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer))]. Some of the points make immediate sense, such as "readability counts".
+These are some nuggets of wisdom from Tim Peters, a "major contributor to the Python programming language" [refer](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)). Some of the points make immediate sense, such as "readability counts".
 
 
 

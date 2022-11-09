@@ -44,13 +44,13 @@ The sentence enclosed by the parentheses of the `print` function is called a **s
 
 > Print a string that has an apostrophe in it:
 
-```python
+```pycon
 >>> print("India's capital is New Delhi.")
 ```
 
 Run the code given above and observe the output. `print` can also be used to print numbers:
 
-```python
+```pycon
 >>> print(1)
 1
 >>> print(2.0)
@@ -59,7 +59,7 @@ Run the code given above and observe the output. `print` can also be used to pri
 
 Multiple items can be printed on the same line in the following way:
 
-```python
+```pycon
 >>> print(1, 2)
 1 2
 >>> print('online', 'degree', 'program')
@@ -70,7 +70,7 @@ Notice the presence of a space between successive elements? `print` automaticall
 
 If the `print` command is called without passing any input to it, then it prints a blank line:
 
-```python
+```pycon
 >>> print()
 
 >>>
@@ -78,14 +78,14 @@ If the `print` command is called without passing any input to it, then it prints
 
 What happens if we just use type `print` without having the parentheses?
 
-```python
+```pycon
 >>> print
 <built-in function print>
 ```
 
 We don't get an error. Instead, the message is that `print` is a built-in function. But when you try the following code:
 
-```python
+```pycon
 >>> print 'Hello World!'
   File "<stdin>", line 1
     print 'Hello World!'
@@ -99,7 +99,7 @@ The interpreter hits back with a `SyntaxError`. Like human languages, programmin
 
 Before we jump into the serious stuff, let us try and print some emojis!
 
-```py
+```pycon
 >>> print('\N{smiling face with smiling eyes}')
 😊
 >>> print('\N{grinning face}')
@@ -116,7 +116,7 @@ Try this out in an interpreter of your choice! A full list of emojis can be foun
 
 Strings like `'Hello World!'` and numbers like `1`, `2.0` are called literals in Python. Formally, a literal is something that describes a constant value. Variables are containers that are used to store values. Variables in Python are defined in the following way:
 
-```python
+```pycon
 >>> x = 1
 >>> print(x)
 1
@@ -133,7 +133,7 @@ a string
 - define a new variable
 - update an existing variable
 
-```python
+```pycon
 >>> x = 1         # define a new variable
 >>> x = x + 1     # update an existing variable
 >>> print(x)
@@ -155,7 +155,7 @@ We will be looking at the following basic data types:
 
 The `int` type represents integers. Python provides a command called `type` to determine the type of an object:
 
-```python
+```pycon
 >>> print(1)
 1
 >>> type(1)
@@ -166,7 +166,7 @@ The `int` type represents integers. Python provides a command called `type` to d
 
 The `float` type represents real numbers:
 
-```python
+```pycon
 >>> print(1.0)
 1.0
 >>> type(1.0)
@@ -175,7 +175,7 @@ The `float` type represents real numbers:
 
 The following is also a valid float literal:
 
-```python
+```pycon
 >>> print(1.)
 1.0
 ```
@@ -186,7 +186,7 @@ The following is also a valid float literal:
 
 The `str` type represents strings:
 
-```python
+```pycon
 >>> print('one')
 one
 >>> type("one")
@@ -197,7 +197,7 @@ one
 
 The `bool` type represents boolean values:
 
-```python
+```pycon
 >>> print(True)
 True
 >>> type(False)
@@ -210,7 +210,7 @@ Please note that `bool` values are case sensitive. That is, `true` and `false` a
 
 A comment is a line of text that is not executed by the interpreter. Comments begin with the `#` symbol. The following are comments:
 
-```python
+```pycon
 >>> # This is a comment
 >>> # print(1)
 >>> 
@@ -218,7 +218,7 @@ A comment is a line of text that is not executed by the interpreter. Comments be
 
 As line-2 is a comment, `1` is not printed in the next line. Comments can also come at the end of a line of code:
 
-```python
+```pycon
 >>> print(1) # This line is printing the value 1
 1
 ```
