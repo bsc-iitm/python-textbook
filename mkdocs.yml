@@ -27,8 +27,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.keys
 
 plugins:
   - search
@@ -37,6 +40,9 @@ plugins:
       video_autoplay: True
       css_style:
         width: "100%"
+
+extra_css:
+  - stylesheets/extra.css
 
 extra_javascript:
   - javascripts/mathjax.js

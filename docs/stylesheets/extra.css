@@ -1,0 +1,8 @@
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+td.code {
+    padding: 1 !important;
+}
