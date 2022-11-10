@@ -4,25 +4,23 @@
 
 In this lesson, we will be working with the Python interpreter in Interactive Mode. It is also often called the Python shell. It is a tool that lets us execute individual lines of code and see the output right away. We will drop the phrase "interactive mode" and just refer to it as the interpreter. Have a look at the official Python documentation for more details about the <a href="https://docs.python.org/3/tutorial/interpreter.html" target=:_blank>Python Interpreter </a>. If you have Python installed on your system, then the Python shell will look like this:
 
-<p align="center">
-  <img title="" src="/assets/images/img-001.png" alt="image-20210310105155189" style="zoom:80%;" data-align="center">
-</p>
+<div class="center" markdown>
+  ![Python IDLE](../assets/images/img-001.png)
+</div>
 
 In Replit, this corresponds to the console screen on the right of the repl. This will be our playground for quite sometime:
 
-<video controls loop autoplay muted>
-    <source src="/assets/videos/prompt.mp4" type="video/mp4" zoom=50%>
-</video>
+![type:video](../assets/videos/prompt.mp4)
 
 ## Prompts
 
-<img title="" src="/assets/images/img-003.png" alt="" style="zoom:100%;" data-align="center">
+![Replit prompt](../assets/images/img-003.png)
 
 The orange symbol that is displayed above is called a prompt. Its role is similar to that of the blinking cursor while editing documents. It is an invitation to type code. Code that is typed at the prompt is executed by the interpreter. In these lessons, we will use the following symbol to refer to the prompt: `>>>`.
 
 We are all set to write our first line of code:
 
-```py
+```pycon
 >>> print('Hello World!')
 Hello World!
 ```
@@ -31,7 +29,7 @@ Fire up a repl and type the code in the console. You will be getting the output 
 
 ## Output
 
-Let us take a closer look at the first line of code that we wrote. `print` is called a built-in function in Python. A function is an object that accepts inputs and returns outputs. The term built-in refers to the fact that this function is something that is readily provided by Python for our use.
+Let us take a closer look at the first line of code that we wrote. `#!py print()` is called a built-in function in Python. A function is an object that accepts inputs and returns outputs. The term built-in refers to the fact that this function is something that is readily provided by Python for our use.
 
 ```python
 >>> print('Hello World!')
@@ -40,15 +38,16 @@ Hello World!
 Hello World!
 ```
 
-The sentence enclosed by the parentheses of the `print` function is called a **string**. A **string** is a sequence of characters enclosed in quotes. Strings can either be in single quotes or double quotes. However, a single quote can't be matched against a double quote to enclose a string. We have used single quotes in line 1 and double quotes in line 3. Both lines give identical outputs. The ability to use both single quotes and double quotes comes in handy in situations like this:
+The sentence enclosed by the parentheses of the `#!py print()` function is called a **string**. A **string** is a sequence of characters enclosed in quotes. Strings can either be in single quotes or double quotes. However, a single quote can't be matched against a double quote to enclose a string. We have used single quotes in line 1 and double quotes in line 3. Both lines give identical outputs. The ability to use both single quotes and double quotes comes in handy in situations like this:
 
-> Print a string that has an apostrophe in it:
+!!! question "Problem" 
+    Print a string that has an apostrophe in it:
 
 ```pycon
 >>> print("India's capital is New Delhi.")
 ```
 
-Run the code given above and observe the output. `print` can also be used to print numbers:
+Run the code given above and observe the output. `#!py print()` can also be used to print numbers:
 
 ```pycon
 >>> print(1)
