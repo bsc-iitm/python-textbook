@@ -135,9 +135,9 @@ For `n` = 9, this will give the required output:
 1,2,3,4,5,6,7,8,9
 ```
 
-Whenever we use the `print` function, it prints the expression passed to it and immediately follows it up by printing a newline. This is the default behaviour of `print`. It can be altered by using a special argument called `end`. The default value of `end` is set to the newline character. So, whenever the end argument is not explicitly specified in the print function, a newline is appended to the input expression by default. In the code given above, by setting `end` to be a comma, we are forcing the `print` function to insert a comma instead of a newline at the end of the expression passed to it. It is called `end` because it is added at the end. To get a better picture, consider the following code:
+Whenever we use the `#!py print()` function, it prints the expression passed to it and immediately follows it up by printing a newline. This is the default behaviour of `#!py print()`. It can be altered by using a special argument called `end`. The default value of `end` is set to the newline character. So, whenever the end argument is not explicitly specified in the print function, a newline is appended to the input expression by default. In the code given above, by setting `end` to be a comma, we are forcing the `#!py print()` function to insert a comma instead of a newline at the end of the expression passed to it. It is called `end` because it is added at the end. To get a better picture, consider the following code:
 
-```python
+```python linenums="1"
 print()
 print(end = ',')
 print(1)
@@ -148,19 +148,19 @@ print(3, end = ',')
 
 This output is:
 
-```
+``` linenums="1"
 
 ,1
 1,2,3,
 ```
 
-Even though nothing is being passed to the print function in the first line of code, the first line in the output is a newline because the default value of `end` is a newline character (`'\n'`). No expression is passed as input to print in the second line of code as well, but `end` is set to `,`. So, only a comma is printed. Notice that line-3 of the code is printed in line-2 of the output. This is because `end` was set to `,` instead of the newline character in line-2 of the code.
+Even though nothing is being passed to the print function in the first line of code, the first line in the output is a newline because the default value of `end` is a newline character (`'\n'`). No expression is passed as input to print in the second line of code as well, but `end` is set to `,`. So, only a comma is printed. Notice that line 3 of the code is printed in line 2 of the output. This is because `end` was set to `,` instead of the newline character in line 2 of the code.
 
 
 
 ### `sep`
 
-If multiple expressions are passed to the `print` function, it prints all of them in the same line, by adding a space between adjacent expressions. For example:
+If multiple expressions are passed to the `#!py print()` function, it prints all of them in the same line, by adding a space between adjacent expressions. For example:
 
 ```python
 print('this', 'is', 'cool')
@@ -202,21 +202,22 @@ thisiscool
 
 Let us look at one final example that makes use of both `end` and `sep`:
 
-> Accept a positive integer `n`, which is also a multiple of 3, as input and print the following pattern:
+!!! question " "
+    Accept a positive integer `n`, which is also a multiple of 3, as input and print the following pattern:
 
-```
-|1,2,3|4,5,6|7,8,9|...|n - 2,n - 1,n|
-```
+    ```
+    |1,2,3|4,5,6|7,8,9|...|n - 2,n - 1,n|
+    ```
 
-For `n = 9`, we would like to print:
+    For `n = 9`, we would like to print:
 
-```
-|1,2,3|4,5,6|7,8,9|
-```
+    ```
+    |1,2,3|4,5,6|7,8,9|
+    ```
 
 **Solution**
 
-```python
+```python linenums="1"
 n = int(input())
 print('|', end = '')
 for i in range(1, n + 1, 3):
@@ -224,7 +225,7 @@ for i in range(1, n + 1, 3):
 print()
 ```
 
-Notice that the `for` loop iterates in steps of 3 starting from 1. To print the comma separated triplet `i,i + 1,i + 2`, `sep` is set to `,`. After printing each triplet, the symbol `|` needs to be printed. This is achieved by setting `end` to be equal to `|`. Line-2 makes sure that the symbol `|` is present at the beginning of the pattern. The last `print` statement outside the loop is there so that the prompt can move to the next line on the console once the pattern has been printed. You can try removing the last line and see how that changes the output on the console.
+Notice that the `#!py for` loop iterates in steps of 3 starting from 1. To print the comma separated triplet `i,i + 1,i + 2`, `sep` is set to `,`. After printing each triplet, the symbol `|` needs to be printed. This is achieved by setting `end` to be equal to `|`. Line 2 makes sure that the symbol `|` is present at the beginning of the pattern. The last `#!py print()` statement outside the loop is there so that the prompt can move to the next line on the console once the pattern has been printed. You can try removing the last line and see how that changes the output on the console.
 
 
 
