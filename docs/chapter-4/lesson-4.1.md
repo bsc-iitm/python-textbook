@@ -1,15 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-4/lesson-4.2.html">Lesson-4.2</a>    
-</span> 
-<hr> 
-
 # Lesson-4.1
-
-
-[TOC]
 
 ## Functions
 
@@ -17,17 +6,17 @@
 
 In mathematics, a function is an object that accepts one or more inputs and produces one or more outputs. For example, $f(x) = x^2$, is a function that accepts a number and returns the square of that number. Functions in Python play a similar role, but are much more richer than their mathematical counterparts. Let us quickly convert the mathematical function, $f(x) = x^2$,  into a Python function:
 
-```python
+```python linenums="1"
 def f(x):
     y = x ** 2
     return y
 ```
 
-The code given above is called the **definition** of function `f`. `def` is the keyword used to define functions. `f` is the name of the function. `x` is a parameter of the function. Lines 2 and 3 make up the body of the function and are indented. The body of a function is a collection of statements that describe what the function does. At line-3, the value stored in variable `y` is returned. `return` is the keyword used for this purpose.
+The code given above is called the **definition** of function `f`. `#!py def` is the keyword used to define functions. `f` is the name of the function. `x` is a parameter of the function. Lines 2 and 3 make up the body of the function and are indented. The body of a function is a collection of statements that describe what the function does. At line 3, the value stored in variable `y` is returned. `#!py return` is the keyword used for this purpose.
 
 If we run the above code, we will not get any output. Functions are not executed unless they are called. The following code demonstrates what a **function call** looks like:
 
-```python
+```python linenums="1"
 def square(x):
     y = x ** 2
     return y
@@ -41,11 +30,11 @@ The output is:
 4
 ```
 
-`square(2)` is a function call. We use the name of the function, `square`, and pass the number 2 as an argument to it. The `x` in the function definition is called the **parameter**. The value that is passed to the function in the call is called the **argument**. This is a convention that we will follow throughout this lesson.
+`#!py square(2)` is a function call. We use the name of the function, `square`, and pass the number 2 as an argument to it. The `x` in the function definition is called the **parameter**. The value that is passed to the function in the call is called the **argument**. This is a convention that we will follow throughout this lesson.
 
 A visual representation of the terms we have defined so far is given below:
 
-<img src="../assets/images/img-010.png" style="zoom:60%"  />
+![functions](../assets/images/img-010.png)
 
 A mental model to understand functions:
 
@@ -61,7 +50,7 @@ We will look at a wide variety of function definitions. The focus will be on the
 
 - Functions could have multiple parameters:
 
-```python
+```python linenums="1"
 # This function computes the area of a rectangle.
 # Length and breadth are the parameters
 def area(l, b):
@@ -70,14 +59,14 @@ def area(l, b):
 
 - Functions could have no parameters:
 
-```python
+```python linenums="1"
 def foo():
     return "I don't like arguments visiting me!"
 ```
 
 - Functions could have no return value:
 
-```python
+```python linenums="1"
 def foo():
     print("I don't like talking to the outside world!")
     
@@ -90,37 +79,37 @@ When the code given above is executed, we get the following output:
 I don't like talking to the outside world!
 ```
 
-Note that we didn't have to type `print(foo())`. We just had to call the function — `foo()` — since it already has the print statement inside it. But what happens if we type `print(foo())`? We get the following output:
+Note that we didn't have to type `#!py print(foo())`. We just had to call the function — `foo()` — since it already has the print statement inside it. But what happens if we type `#!py print(foo())`? We get the following output:
 
-```
+``` linenums="1"
 I don't like talking to the outside world!
 None
 ```
 
-If no explicit return statement is present in a function, `None` is the default value returned by it. When the interpreter comes across the `print(foo())` statement, first the function `foo()` is evaluated. This results in the first line of the output. Since `foo()` has no explicit return statement, it returns `None` by default. That is why the second line in the output is `None`.
+If no explicit return statement is present in a function, `None` is the default value returned by it. When the interpreter comes across the `#!py print(foo())` statement, first the function `foo()` is evaluated. This results in the first line of the output. Since `foo()` has no explicit return statement, it returns `None` by default. That is why the second line in the output is `None`.
 
 - A minimal Python function looks like the one given below:
 
-```python
+```python linenums="1"
 def foo():
     pass
 ```
 
-`pass` is a keyword in Python. When the interpreter comes across a `pass` statement, it doesn't perform any computation and moves on to the next line. The reason this is minimal is because it has only those features that are absolutely essential for a function definition to be syntactically valid: function name and at least one statement in the body. 
+`#!py pass` is a keyword in Python. When the interpreter comes across a `#!py pass` statement, it doesn't perform any computation and moves on to the next line. The reason this is minimal is because it has only those features that are absolutely essential for a function definition to be syntactically valid: function name and at least one statement in the body. 
 
-Such functions might seem useless at first sight, but they do have their place in programming. While writing a complex piece of code, a coder may realize that she needs to define a function to perform a specific task. But she may not know the exact details of the implementation or it may not be an urgent requirement. In such a scenario, she will add a minimal function like the one given above in her code and name it appropriately. Implementing this function will become a task on her to-do list and will be taken up as and when the need arises.
+Such functions might seem useless at first sight, but they do have their place in programming. While writing a complex piece of code, a coder may realize that they need to define a function to perform a specific task. But they might not know the exact details of the implementation or it may not be an urgent requirement. In such a scenario, they will add a minimal function like the one given above in their code and name it appropriately. Implementing this function will become a task on their to-do list and will be taken up as and when the need arises.
 
 - Functions could have multiple return statements, but the moment the first return is executed, control exits from the function:
 
-```python
+```python linenums="1"
 def foo():
     return 1
 	return 2
 ```
 
-`foo()` will always return 1. Line-3 is redundant. An example of a function having multiple returns that are not redundant:
+`foo()` will always return 1. Line 3 is redundant. An example of a function having multiple returns that are not redundant:
 
-```python
+```python linenums="1"
 def evenOrOdd(n):
     if n % 2 == 0:
         return 'even'
@@ -133,16 +122,16 @@ print(evenOrOdd(11))
 
 The output is:
 
-```
+``` linenums="1"
 even
 odd
 ```
 
-When `evenOrOdd` is called with an even number as argument, the return statement in line-3 is executed. When the same function is called with an odd number as argument, the return statement in line-5 is executed.
+When `evenOrOdd` is called with an even number as argument, the return statement in line 3 is executed. When the same function is called with an odd number as argument, the return statement in line 5 is executed.
 
 - Functions could return multiple values:
 
-```python
+```python linenums="1"
 # Accept only positive floating point numbers
 def bound(x):
     lower = int(x)
@@ -154,11 +143,11 @@ l, u = bound(y)
 print(f'{l} < {y} < {u}')
 ```
 
-The exact mechanism of what happens here will become clear when we come to the lesson on tuples. In line-8, the first value returned by `bound` is stored in `l` and the second value returned by `bound` is stored in `u`.
+The exact mechanism of what happens here will become clear when we come to the lesson on tuples. In line 8, the first value returned by `bound` is stored in `l` and the second value returned by `bound` is stored in `u`.
 
 - Functions have to be defined before they can be called. The function call cannot come before the definition. For example:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet! #####
 print(f(5))
 
@@ -167,11 +156,11 @@ def f(x):
 ##### Alarm! Wrong code snippet! #####
 ```
 
-When the above code is executed, it throws a `NameError`. Why does this happen? The Python interpreter executes the code from top to bottom. At line-2, `f` is a name that the interpreter has never seen before and therefore it throws a `NameError`. Recall that `NameError` occurs when we try to reference a name that the interpreter has not seen before.
+When the above code is executed, it throws a `NameError`. Why does this happen? The Python interpreter executes the code from top to bottom. At line 2, `f` is a name that the interpreter has never seen before and therefore it throws a `NameError`. Recall that `NameError` occurs when we try to reference a name that the interpreter has not seen before.
 
 - Function calls could be used in expressions:
 
-```python
+```python linenums="1"
 def square(a):
     return a ** 2
 
@@ -182,7 +171,7 @@ if square(x) + square(y) == square(z):
 
 - Function calls cannot be assigned values:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet! #####
 def foo():
     return True
@@ -195,7 +184,7 @@ The above code throws a `SyntaxError`.
 
 - Functions can be called from within other functions:
 
-```python
+```python linenums="1"
 def foo():
     print('I am inside foo')
     
@@ -211,7 +200,7 @@ print('I am outside both foo and bar')
 
 - Functions can be defined inside other functions:
 
-```python
+```python linenums="1"
 def foo():
     def bar():
         print('bar is inside foo')
@@ -220,15 +209,16 @@ def foo():
 foo()
 ```
 
-Try calling `bar()` outside `foo`. What do you observe?
+Try calling `bar()` outside `foo()`. What do you observe?
 
 
+<!-- Should move this section to later lessons -->
 
 ### Docstrings
 
 Consider the following function:
 
-```python
+```python linenums="1"
 def square(x):
     """Return the square of x."""
     return x ** 2
@@ -246,7 +236,7 @@ The docstring associated with a given function can be accessed using the `__doc_
 print(square.__doc__)
 ```
 
-This gives `'Return the square of x.'` as output.
+This gives `Return the square of x.` as output.
 
 
 
