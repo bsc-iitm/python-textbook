@@ -1,32 +1,19 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-4/lesson-4.3.html">Lesson-4.3</a>    
-</span> 
-<hr> 
-
 # Lesson-4.2
-
-[TOC]
 
 ## Arguments
 
-Python offers a number of options in terms of the way arguments can be passed to functions. Each method of argument passing tries to answer the following question:
-
-> How are the arguments in the function call passed to the parameters in the function definition?
-
-
+Python offers a number of options in terms of the way arguments can be passed to functions.
 
 ### Positional arguments
 
 All functions that we have seen so far have used positional arguments. Here, the position of an argument in the function call determines the parameter to which it is passed. Let us take the following problem:
 
-> Write a function that accepts three positive integers `x`, `y` and `z`. Return `True` if the three integers form the sides of a right triangle with `x` and `y` as its legs and `z` as the hypotenuse, and `False` otherwise.
+!!! question " "
+    Write a function that accepts three positive integers `x`, `y` and `z`. Return `True` if the three integers form the sides of a right triangle with `x` and `y` as its legs and `z` as the hypotenuse, and `False` otherwise.
 
 **Solution**
 
-```python
+```python linenums="1"
 def isRight(x, y, z):
     if x ** 2 + y ** 2 == z ** 2:
         return True
@@ -38,14 +25,14 @@ print(isRight(5, 4, 3)) # 5 is passed to x, 4 is passed to y, 3 is passed to z
 
 The output is:
 
-```
+``` linenums="1"
 True
 False
 ```
 
 Arguments are passed to the parameters of the function based on the position they occupy in the function call. Look at the comments in the above code to get a clear picture. Positional arguments are also called required arguments, i.e., they cannot be left out. Likewise, adding more arguments than there are parameters will throw an error. When positional arguments are involved, there should be exactly as many arguments in the function call as there are parameters in the function definition. Try to execute the following code and study the error message:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet!
 isRight(3, 4)
 isRight(3, 4, 5, 6)
@@ -58,15 +45,15 @@ isRight(3, 4, 5, 6)
 
 Keyword arguments introduce more flexibility while passing arguments. Let us take up the same problem that we saw in the previous section and just modify the function calls:
 
-```python
+```python linenums="1"
 # The following is just a function call.
 # We are not printing anything here.
 isRight(x = 3, y = 4, z = 5)
 ```
 
-The function call in line-3 uses what are known as keyword arguments. In this method, the names of the parameters are explicitly specified and the arguments are assigned to it using the `=` operator. This is different from positional arguments where the position of the argument in the function call determines the parameter to which it is bound. One advantage of using keyword arguments is that it reduces the possibility of entering the arguments in an incorrect order. For example: 
+The function call in line 3 uses what are known as keyword arguments. In this method, the names of the parameters are explicitly specified and the arguments are assigned to it using the `#!py =` operator. This is different from positional arguments where the position of the argument in the function call determines the parameter to which it is bound. One advantage of using keyword arguments is that it reduces the possibility of entering the arguments in an incorrect order. For example: 
 
-```python
+```python linenums="1"
 isRight(3, 4, 5)	# intended call
 isRight(5, 4, 3)	# actuall call
 isRight(x = 3, y = 4, z = 5) # same as intended call
@@ -81,17 +68,17 @@ isRight(3, y = 4, z = 5)
 
 Now try this out:
 
-```python
+```python linenums="1"
 #### Alarm! Wrong code snippet! ####
 isRight(x = 3, 4, 5)
 #### Alarm! Wrong code snippet! ####
 ```
 
-The interpreter throws a `TypeError` with the following message: `positional argument follows keyword arguments`. That is, in our function call, the positional arguments — `4` and `5` — come after the keyword argument `x = 3`. Why does the interpreter objects to this? Whenever both positional and keyword arguments are present in a function call, the keyword arguments must always come at the end. This is quite reasonable: positional arguments are extremely sensitive to position, so it is best to have them at the beginning.
+The interpreter throws a `TypeError` with the following message: `positional argument follows keyword arguments`. That is, in our function call, the positional arguments — `#!py 4` and `#!py 5` — come after the keyword argument `#!py x = 3`. Why does the interpreter objects to this? Whenever both positional and keyword arguments are present in a function call, the keyword arguments must always come at the end. This is quite reasonable: positional arguments are extremely sensitive to position, so it is best to have them at the beginning.
 
 How about the following call?
 
-```python
+```python linenums="1"
 #### Alarm! Wrong code snippet! ####
 isRight(3, x = 3, y = 4, z = 5)
 #### Alarm! Wrong code snippet! ####
@@ -107,7 +94,7 @@ Consider the following scenario. The image that you see here is a map of your ne
 
 
 
-<img src="../assets/images/img-019.png" alt="image-20210405111223165" style="zoom:80%;" />
+![](../assets/images/img-019.png)
 
 
 
@@ -133,13 +120,13 @@ def distance(x, y, metric = 'manhattan'):
         return pow(x ** 2 + y ** 2, 0.5)
 ```
 
-The parameter `metric` has `'manhattan'` as the default value. Let us try calling the function without passing any argument to the `metric` parameter:
+The parameter `metric` has `#!py 'manhattan'` as the default value. Let us try calling the function without passing any argument to the `metric` parameter:
 
 ```python
 print(distance(3, 4))
 ```
 
-This gives `7` as the output. Since no value was provided in the function call, the default value of `'manhattan'` was assigned to the `metric` parameter. In the code base, wherever the Manhattan distance is invoked, we can just replace it with the function call `distance(x, y)`.
+This gives `7` as the output. Since no value was provided in the function call, the default value of `#!py 'manhattan'` was assigned to the `metric` parameter. In the code base, wherever the Manhattan distance is invoked, we can just replace it with the function call `distance(x, y)`.
 
 The following points are important to keep in mind:
 
@@ -150,7 +137,7 @@ The following points are important to keep in mind:
 
 Let us illustrate some of these points:
 
-```python
+```python linenums="1"
 #### Alarm! Wrong code snippet! ####
 def distance(metric = 'manhattan', x, y):
     if metric == 'manhattan':
@@ -176,7 +163,7 @@ All three function calls are equivalent. The first one uses default value of `me
 
 Consider the following code:
 
-```python
+```python linenums="1"
 def double(x):
     x = x * 2
     return x
@@ -194,11 +181,11 @@ before function call, a = 4
 after function call, a = 4
 ```
 
-We see that the value of `a` is not disturbed by the function in any way. When the function call `double(a)` is invoked, the value in `a` is assigned to the parameter `x` in the function. Arguments are passed by assignment in Python, which means that something like `x = a` happens when `double(a)` is invoked. This kind of a function call where the value in a variable is passed as argument to the function is called **call by value**.
+We see that the value of `a` is not disturbed by the function in any way. When the function call `double(a)` is invoked, the value in `a` is assigned to the parameter `x` in the function. Arguments are passed by assignment in Python, which means that something like `#!py x = a` happens when `double(a)` is invoked. This kind of a function call where the value in a variable is passed as argument to the function is called **call by value**.
 
 Consider the following code:
 
-```python
+```python linenums="1"
 def square(x):
     return x * x
 
@@ -208,7 +195,7 @@ x_squared = square(x)
 
 We are using the same name for both the parameter of the function `square` and the argument passed to it. This is a bad practice. It is always preferable to differentiate the names of the parameters from the names of the arguments that are passed in the function call. This avoids confusion and makes code more readable. At this stage, you might be wondering how the variable `x` inside the function is related to the variable `x` outside it. This issue will be taken up in the next lesson on scopes. The above code could be rewritten as follows:
 
-```python
+```python linenums="1"
 def square(num):
     return num * num
 
