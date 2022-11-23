@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-6/lesson-6.4.html">Lesson-6.4</a> 
-</span> 
-<hr>
-
 # Lesson-6.3
-
-[TOC]
 
 ## Dictionaries
 
@@ -16,16 +6,18 @@
 
 Assume that we wish to compute the following mapping between letters of the English alphabet and numbers from 1 to 26:
 
+<div class="center" markdown>
 | Letter | Number |
-| ------ | ------ |
+|: ---- :|: ---- :|
 | a      | 1      |
 | b      | 2      |
 | ...    | ...    |
 | z      | 26     |
+</div>
 
-Each letter in the alphabet is mapped to a unique number from 1 to 26. In the table given above, the mapping is a simple linear mapping: `a` is mapped to `1`, `b` to 2 and so on. This mapping can be computed in the most uninteresting and lousy way given below:
+Each letter in the alphabet is mapped to a unique number from 1 to 26. In the table given above, the mapping is a simple linear mapping: `#!py 'a'` is mapped to `#!py 1`, `#!py 'b'` to `#!py 2` and so on. This mapping can be computed in the most uninteresting and lousy way given below:
 
-```python
+```python linenums="1"
 mapping = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5,
            'f': 6 , 'g': 7, 'h': 8, 'i': 9, 'j': 10, 
            'k': 11, 'l': 12, 'm': 13, 'n': 14, 'o': 15,
@@ -38,15 +30,15 @@ for letter, count in mapping.items():
     print(letter, count)
 ```
 
-Phew! I typed the whole thing out. It took me two dull minutes and I learned nothing new at the end of the exercise. My fingers cursed me for the mechanical key-presses while my eyes chided me for staring at the screen without blinking. Besides, the last letter of the alphabet was quite annoyed at being left alone in the last row with no company, while every other letter got to share line-space with four other letters!
+Phew! If you type the whole thing out, it will take you two full dull minutes. Your finger will curse you for the mechanical key-presses while your eyes will chide you for staring at the screen without blinking. You could cheese your way past the challenge by hitting the clipboard button and pasting it but will you really open up this textbook everytime you need to make this mapping?
 
-Let us try a round about but interesting way. Consider the following line:
+Let us try a roundabout but interesting way. Consider the following line:
 
 > the quick brown fox jumps over the lazy dog
 
 This sentence is called a pangram. A pangram is a sentence that uses all the letters of the alphabet. Does that ring any bell?
 
-```python
+```python linenums="1"
 pangram = 'the quick brown fox jumps over the lazy dog'
 words = pangram.split(' ')			# get list of words in the sentence
 letters = ''.join(words)			# join the words back; eliminates spaces
@@ -69,9 +61,10 @@ Plenty of things to learn from those 14 lines of code. Not all diversions are ba
 
 ### Dictionary Methods
 
-We have already seen `keys` and `items`. Both these are methods that return a view object over which we can iterate. According to the Python [documentation](https://docs.python.org/3/library/stdtypes.html#dictionary-view-objects), "a view object provides a dynamic view on the dictionary's entries, which means that when the dictionary changes, the view reflects these changes."
+We have already seen `keys` and `items`. Both these are methods that return a view object over which we can iterate. According to the Python [documentation](https://docs.python.org/3/library/stdtypes.html#dictionary-view-objects), 
+> [View objects] provide a dynamic view on the dictionary's entries, which means that when the dictionary changes, the view reflects these changes.
 
-```python
+```python linenums="15"
 keys = mapping.keys()
 print(keys)
 ```
@@ -82,9 +75,9 @@ This gives the following output:
 dict_keys(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'])
 ```
 
-Using the `list` function, both the `keys` and `items` views can be converted into lists:
+Using the `#!py list()` function, both the `keys` and `items` views can be converted into lists:
 
-```python
+```python linenums="17"
 keys_list = list(mapping.keys())
 print(keys)
 items_list = list(mapping.items())
@@ -98,16 +91,16 @@ The output is as follows:
 [('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5), ('f', 6), ('g', 7), ('h', 8), ('i', 9), ('j', 10), ('k', 11), ('l', 12), ('m', 13), ('n', 14), ('o', 15), ('p', 16), ('q', 17), ('r', 18), ('s', 19), ('t', 20), ('u', 21), ('v', 22), ('w', 23), ('x', 24), ('y', 25), ('z', 26)]
 ```
 
-`keys_list` is a list of keys in the dictionary `mapping`. `items_list` is a list of tuples, where each tuple is a key-value pair. Another useful method is `values`. This returns a view on the values:
+`keys_list` is a list of keys in the dictionary `mapping`. `items_list` is a list of tuples, where each tuple is a key-value pair. Another useful method is `values`. This returns a **view** on the values:
 
-```python
+```python linenums="21"
 view = mapping.values()
 view_list = list(view)
 ```
 
-All three views - `keys, items, values` - support membership tests:
+All three views - `keys`, `items`, `values` - support membership tests:
 
-```python
+```python linenums="23"
 print('a' in mapping.keys())
 print(1 in mapping.values())
 print(('a', 1) in mapping.items())
@@ -115,7 +108,7 @@ print(('a', 1) in mapping.items())
 
 All three return `True`. Membership tests for keys can be done in a simpler way:
 
-```python
+```python linenums="26"
 print('a' in mapping)
 print('x' in mapping)
 print('ab' not in mapping)
@@ -123,7 +116,7 @@ print('ab' not in mapping)
 
 Note that we dropped the `keys` method and it still worked! Now, to delete a key from a dictionary, we use the familiar `pop` method:
 
-```python
+```python linenums="29"
 mapping['ab'] = 3			# some noise added to mapping
 value = mapping.pop('ab')
 print(value)

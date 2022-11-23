@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-7/lesson-7.1.html">Lesson-7.1</a> 
-</span> 
-<hr>
-
 # Lesson-6.5
-
-[TOC]
 
 ## Sets
 
@@ -22,9 +12,15 @@ print(type(even_nums))
 print(isinstance(even_nums, set))
 ```
 
+##### Output
+``` linenums="1"
+<class 'set'>
+True
+```
+
 Notice the similarity in syntax between sets and dictionaries. Both are enclosed within curly braces. While a dictionary has key-value pairs in it, a set just has a collection of values. A set in Python is a remarkably accurate representation of a mathematical set. Therefore, most of the properties that you are used to seeing in mathematical sets nicely carry over to Python sets. This connection is so strong that you can often forget that you are dealing with Python sets.
 
-```python
+```python linenums="1"
 nums_1 = {2, 4, 6, 8, 10}
 nums_2 = {2, 2, 4, 4, 6, 6, 8, 8, 10, 10}
 print(nums_1, nums_2)
@@ -32,38 +28,45 @@ print(nums_1 == nums_2)
 print(nums_1 is not nums_2)
 ```
 
+##### Output
+``` linenums="1"
+{2, 4, 6, 8, 10} {2, 4, 6, 8, 10}
+True
+True
+```
+
 As stated before, sets do not support duplicate elements. We see that `nums_1` and `nums_2` are equal sets. However, they don't point to the same object. Sets support membership just like lists, tuples and dictionaries.
 
-```python
+```python linenums="1"
 nums = {1, 2, 3, 4, 5}
 print(1 in nums)
 print(6 not in nums)
 ```
 
-The number of elements in a set, which is the same as its cardinality, is given by the `len` function:
+The number of elements in a set, which is the same as its cardinality, is given by the `#!py len()` function:
 
-```python
+```python linenums="1"
 nums = {1, 2, 3, 4, 5}
 print(f'Cardinality of nums is {len(nums)}')
 ```
 
 Sets cannot be indexed. This is quite reasonable as they are not ordered collections. The following code will throw an error:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet! #####
 some_set = {'this', 'is', 'a', 'set'}
 print(some_set[0])
 ##### Alarm! Wrong code snippet! #####
 ```
 
-Any hashable object can be added to sets. This means most of the immutable types such as `int`, `float`, `str` and `tuple` can be added to sets. A small caveat as far as tuples are concerned: a tuple of lists is unhashable and therefore cannot be added to sets.
+Any hashable object can be added to sets. This means most of the immutable types such as `#!py int`, `#!py float`, `#!py str` and `#!py tuple` can be added to sets. A small caveat as far as tuples are concerned: a tuple of lists is unhashable and therefore cannot be added to sets.
 
-```python
+```python linenums="1" hl_lines="2"
 a_set = {1.0, 'one', 1, True, (1, )}	# valid set
 not_a_set = {([1, 2], [3, 4])}			# not a valid set
 ```
 
-`not_a_set` returns a `TypeError` as expected.
+`not_a_set` returns a `#!py TypeError` as expected.
 
 
 
@@ -71,7 +74,7 @@ not_a_set = {([1, 2], [3, 4])}			# not a valid set
 
 Though a set is not a sequence, iterating through the elements of a set is supported.
 
-```python
+```python linenums="1"
 nums = {1, 2, 3, 4, 5}
 for num in nums:
     print(num)
@@ -83,7 +86,7 @@ for num in nums:
 
 How do we define an empty set?
 
-```python
+```python linenums="1"
 ##### Alarm! Be careful about the variable name! #####
 empty_set = { }
 print(isinstance(empty_set, set))
