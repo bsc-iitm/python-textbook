@@ -6,9 +6,6 @@ This is an online textbook on Python and is a companion resource to the course `
 
 **Note to students**: This book is meant to be used as a reference. You may find content that has not  been covered in the video lectures. Likewise, there may be some content that is present in the lectures which is not covered here. Additional content appearing in this book will not be considered for grading. In summary, please refer to chapters that you feel are relevant for the course. But you are under no obligation to read the entire book cover to cover. Interested students are always welcome to read the entire thing!
 
-
-[TOC]
-
 <video controls loop autoplay muted>
     <source src="assets/videos/intro.mp4" type="video/mp4">
 </video>
