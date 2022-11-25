@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-6/lesson-6.1.html">Lesson-6.1</a> 
-</span> 
-<hr> 
-
 # Lesson-5.6
-
-[TOC]
 
 ## Tuples
 
@@ -176,7 +166,7 @@ x, y, z = T
 print(x, y, z)
 ```
 
-Here, the tuple `T` is unpacked into the corresponding variables `x`, `y` and `z`. This is the principle behind multiple assignment. From the Python documentation, we have [[refer](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences)]:
+Here, the tuple `T` is unpacked into the corresponding variables `x`, `y` and `z`. This is the principle behind multiple assignment. From the Python documentation, we have <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" target="_blank">refer</a>
 
 > Multiple assignment is a combination of tuple packing and sequence unpacking.
 
@@ -206,5 +196,5 @@ print(x)
 print(isinstance(x, tuple))
 ```
 
-We see that `x` is a tuple. In the return statements at lines 3 and 4, the multiple values are packed into tuples. So, the function is essentially returning a tuple.
+We see that `x` is a tuple. In the return statements at lines 3 and 4, multiple values are packed into tuples. So, the function is essentially returning a tuple.
 
