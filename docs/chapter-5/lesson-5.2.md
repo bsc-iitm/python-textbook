@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-5/lesson-5.3.html">Lesson-5.3</a> 
-</span> 
-<hr> 
-
 # Lesson-5.2
-
-[TOC]
 
 ## Lists
 
@@ -48,7 +38,7 @@ Both give the same output even though we are only modifying `list2` in-place!
 
 What is happening here? To understand this, we will take the help of a built-in function called `id`. Every object in Python has a unique identity: if `x` is an object, then `id(x)` returns this object's identity. From the Python documentation, "this is guaranteed to be unique among simultaneously existing objects". In the implementation of the Python that we use, this unique `id` is nothing but the object's memory address.
 
-<img src="../assets/images/img-039.png" style="zoom:90%;" />
+![Referencing](../assets/images/img-039.png)
 
 In line-2, we are *not* creating a new object. We are merely creating another name, also called an alias, for the same object. Think of this like having a nickname. Your name and nickname are two different words, but both of them refer to you. To see if two Python names point to the same object, we can use the `is` keyword:
 
