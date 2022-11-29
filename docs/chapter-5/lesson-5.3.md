@@ -1,15 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-5/lesson-5.4.html">Lesson-5.4</a> 
-</span> 
-<hr>
-
 # Lesson-5.3
-
-
-[TOC]
 
 ## Lists
 
