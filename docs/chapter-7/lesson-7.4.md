@@ -1,23 +1,12 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-7/lesson-7.5.html">Lesson-7.5</a> 
-</span> 
-<hr>
-
-# File Handling
-
-
-[toc]
+# Lesson 7.4
 
 ## File methods
 
-### `read`
+### `#!py read()`
 
 Let us continue working with `examples.txt` that we created in the previous lesson. If you recall, `examples.txt` has the following contents:
 
-```
+``` linenums="1"
 one
 two
 three
@@ -25,9 +14,9 @@ four
 five
 ```
 
-Let us now look at a different way of reading from a file, using the `read` method.
+Let us now look at a different way of reading from a file, using the `#!py read()` method.
 
-```python
+```python linenums="1"
 f = open('examples.txt', 'r')
 content = f.read()
 print(content)
@@ -36,7 +25,7 @@ f.close()
 
 This gives the following output:
 
-```
+``` linenums="1"
 one
 two
 three
@@ -44,17 +33,19 @@ four
 five
 ```
 
-`read` is a method defined for the file object. When it is called without any argument, it returns a string that contains the entire content of the file. If you head to the console (it is to the right of the editor in Replit) and type the string `content`, this is what you get:
+`#!py read()` is a method defined for the file object. When it is called without any argument, it returns a string that contains the entire content of the file. If you head to the console (it is to the right of the editor in Replit) and type the string `content`, this is what you get:
 
 ```
 'one\ntwo\nthree\nfour\nfive'
 ```
 
-Notice that `content` is a single string. It contains the contents of the file, but between consecutive lines in the file, there is a `\n` or a newline character:
+Notice that `content` is a single string. It contains the contents of the file, but between consecutive lines in the file, there is a `#!py '\n'`:
 
-<img src="../assets/images/img-51.png" alt="image-20210627114212775" style="zoom:50%;" />
+<!-- Not sure about the need for this image -->
 
-Except for the last line, every line in the file ends with a `\n` character. When this string is printed to the console — `print(content)` — we get five separate lines even though we are only passing a single string to the `print` function. This is because of the presence of the newline character in the string. Whenever a newline character is encountered, the Python interpreter moves to the next line.
+![Contents of the variable content](../assets/images/img-51.png)
+
+Except for the last line, every line in the file ends with a `#!py '\n'` character. When this string is printed to the console — `#!py print(content)` — we get five separate lines even though we are only passing a single string to the `#!py print()` function. This is because of the presence of the newline character in the string. Whenever a newline character is encountered, the Python interpreter moves to the next line.
 
 Now, it is clear why the following piece of code printed an extra line between consecutive lines in the file:
 
@@ -67,13 +58,13 @@ for line in f:
 f.close()
 ```
 
+<!-- Can improve the flow of this section -->
 
+### `#!py readline()`
 
-### `readline`
+As its name suggests, the `#!py readline()` method reads from the file one line at a time:
 
-As its name suggests, the `readline` method reads from the file one line at a time:
-
-```python
+```python linenums="1"
 f = open('examples.txt', 'r')
 line1 = f.readline()
 line2 = f.readline()
@@ -85,19 +76,21 @@ f.close()
 
 The variables `line1`, `line2`, …, `line5` will hold the following values at the end of execution of the code given above:
 
-| Variable | Value       |
-| -------- | ----------- |
-| `line1`  | `'one\n'`   |
-| `line2`  | `'two\n'`   |
-| `line3`  | `'three\n'` |
-| `line4`  | `'four\n'`  |
-| `line5`  | `'five'`    |
+<div class="center" markdown>
+| Variable | Value            |
+| -------- | ---------------- |
+| `line1`  | `#!py 'one\n'`   |
+| `line2`  | `#!py 'two\n'`   |
+| `line3`  | `#!py 'three\n'` |
+| `line4`  | `#!py 'four\n'`  |
+| `line5`  | `#!py 'five'`    |
+</div>
 
-Notice that `line5` doesn't have a `\n` at the end as it is the last line in the file. Here, we know that there are five lines in the file. This helped us define five separate variables. But what if there are more lines? Generally, we read a file so as to see what its contents are because we don't know what is there in it. Clearly, we need a way to figure out when the file ends.
+Notice that `line5` doesn't have a `#!py '\n'` at the end as it is the last line in the file. Here, we know that there are five lines in the file. This helped us define five separate variables. But what if there are more lines? Generally, we read a file so as to see what its contents are because we don't know what is there in it. Clearly, we need a way to figure out when the file ends.
 
-Now, consider the following code. What happens if we try to read the file using `readline` after all the lines in the file have been read?
+Now, consider the following code. What happens if we try to read the file using `#!py readline()` after all the lines in the file have been read?
 
-```python
+```python linenums="1"
 f = open('examples.txt', 'r')
 line1 = f.readline()
 line2 = f.readline()
@@ -108,13 +101,14 @@ line = f.readline()
 f.close()
 ```
 
-If we execute this and head to the console, we see that the variable `line` defined in line-7 is an empty string! This gives us a way to determine when a file is empty:
+If we execute this and head to the console, we see that the variable `line` defined in line 7 is an empty string! This gives us a way to determine when a file is empty:
 
-> Keep reading lines from the file until an empty string is encountered.
+!!! question " "
+    Keep reading lines from the file until an empty string is encountered.
 
 Let us implement this:
 
-```python
+```python linenums="1"
 f = open('examples.txt', 'r')
 line = f.readline()
 while line != '':
@@ -125,7 +119,7 @@ f.close()
 
 Here, we have managed to read the file using just one string variable. Let us make few more changes to this code:
 
-```python
+```python linenums="1"
 f = open('examples.txt', 'r')
 line = f.readline()
 while line:
@@ -134,21 +128,21 @@ while line:
 f.close()
 ```
 
-In this code, we have made two changes. One in line-3 and another in line-4. The loop condition in line-3  checks for the empty string. If `line` is an empty string, it evaluates to `False` and the loop will be terminated. This is a compact way of writing `line != ''`. Python treats empty sequences as `False`. If this is confusing, execute the following code and check the output:
+In this code, we have made two changes. One in line 3 and another in line 4. The loop condition in line-3  checks for the empty string. If `line` is an empty string, it evaluates to `False` and the loop will be terminated. This is a compact way of writing `#!py line != ''`. Python treats empty sequences as `False`. If this is confusing, execute the following code and check the output:
 
-```python
+```python linenums="1"
 line = ''
 if not line:
     print('It works!')	
 ```
 
-In line-4, we are using the `strip` method to strip the string `line` of all the whitespace characters at the beginning and at the end. In this way, the trailing newline at the end of `line` will be stripped. This way, we don't need to use the `end` argument.
+In line 4, we are using the `#!py strip()` method to strip the string `line` of all the whitespace characters at the beginning and at the end. In this way, the trailing newline at the end of `line` will be stripped. This way, we don't need to use the `end` argument.
 
-### `readlines`
+### `#!py readlines()`
 
 Finally, Python also provides a way to read the file and store it as a list of lines:
 
-```python
+```python linenums="1"
 f = open('examples.txt', 'r')
 lines = f.readlines()
 for line in lines:
@@ -164,11 +158,11 @@ Here, `lines` is a list of lines. Notice that each element in `lines` correspond
 
 
 
-### `write`
+### `#!py write()`
 
-We already saw the `write` method earlier. There, we used the `write` method five times to write five lines. Let us now use a loop with the help of the `lines` list. First, we run the code:
+We already saw the `#!py write()` method earlier. There, we used the `#!py write()` method five times to write five lines. Let us now use a loop with the help of the `lines` list. First, we run the code:
 
-```python
+```python linenums="1"
 f = open('writing.txt', 'w')
 lines = ['one', 'two', 'three', 'four', 'five']
 for line in lines:
@@ -178,11 +172,11 @@ f.close()
 
 When we execute this, the following file is created:
 
-<img src="../assets/images/img-54.png" alt="image-20210627114212775" style="zoom:75%;" />
+![Contents of writing.txt after execution of above code](../assets/images/img-54.png)
 
 
 
-We see that there are six lines in the file and not five, though we seem to have written only five lines. The problem is with line-4, where we are adding `\n` after every string in the list `lines`. We should make sure that we don't add a `\n` after the last string in the list:
+We see that there are six lines in the file and not five, though we seem to have written only five lines. The problem is with line-4, where we are adding `#!py '\n'` after every string in the list `lines`. We should make sure that we don't add a `#!py '\n'` after the last string in the list:
 
 ```python
 f = open('writing.txt', 'w')
@@ -206,45 +200,46 @@ f.close()
 
 This throws the following error:
 
-```
+```pycon
 Traceback (most recent call last):
   File "main.py", line 2, in <module>
     f.write(1)
 TypeError: write() argument must be str, not int
 ```
 
-We see that `write` method accepts only string arguments. If we want to write integers to a file, we have to first convert them to strings:
+We see that `#!py write()` method accepts only string arguments. If we want to write integers to a file, we have to first convert them to strings:
 
-```python
+```python linenums="1"
 f = open('writing.txt', 'w')
 f.write(str(1))
 f.close()
 ```
 
-As an exercise, try to run the following code. What do you observe? Why do you think this happens?
+!!! question " "
+    As an exercise, try to run the following code. What do you observe? Why do you think this happens?
 
-```python
-f = open('writing.txt', 'w')
-f.writeline(str(1))
-f.close()
-```
+    ```python linenums="1"
+    f = open('writing.txt', 'w')
+    f.writeline(str(1))
+    f.close()
+    ```
 
 
 
-### `writelines`
+### `#!py writelines()`
 
-We can write a list of lines to a file using the `writelines` method:
+We can write a list of lines to a file using the `#!py writelines()` method:
 
-```python
+```python linenums="1"
 f = open('writing.txt', 'w')
 lines = ['1\n', '2\n', '3\n', '4\n', '5']
 f.writelines(lines)
 f.close()
 ```
 
-Note that the argument passed to the `writelines` method is a list of strings. This will create a file having the following contents:
+Note that the argument passed to the `#!py writelines()` method is a list of strings. This will create a file having the following contents:
 
-```
+``` linenums="1"
 1
 2
 3

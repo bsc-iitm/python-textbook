@@ -33,6 +33,7 @@ markdown_extensions:
       generic: true
   - pymdownx.keys
   - pymdownx.details
+  - footnotes
 
 plugins:
   - search
