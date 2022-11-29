@@ -1,15 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-5/lesson-5.2.html">Lesson-5.2</a> 
-</span> 
-<hr> 
-
 # Lesson-5.1
-
-
-[TOC]
 
 ## Lists
 
@@ -29,13 +18,13 @@ words = ['this', 'is', 'a', 'list']
 [1, 2, 3, 4, 5]
 ```
 
-- Lists could contain objects of different types. Python permits lists such as this:
+- Lists could contain objects of different data types. Python permits lists such as this:
 
 ```python
 mixture = [1, 1.0, '1', True]
 ```
 
-- Lists have a separate type - `list`. We can also check if a given variable holds an object of type `list`:
+- Lists have a separate data type - `list`. We can also check if a given variable holds an object of type `list`:
 
 ```python
 numbers = [1, 2, 3]
@@ -58,8 +47,6 @@ print(numbers[0], numbers[1], numbers[2], numbers[3])
 print(numbers[1 : 3])
 print(numbers[-2])
 ```
-
-
 
 ### Iterating through lists
 
@@ -95,8 +82,6 @@ for index in range(len(numbers)):
 In the example given above, `len(numbers)` is equal to `4`. So, the `range` sequence will be `0, 1, 2, 3`. `index` is the loop variable that iterates through this sequence.
 
 Methods 2 and 3 are very similar. Both iterate through the sequence of indices, and use list indexing to access the corresponding element in the list. The only difference is that method-2 uses `while`, while method-3 uses `for`. Method-1 stands out from the other two as it directly pulls elements from the sequence.
-
-
 
 ### Growing a list
 
@@ -141,8 +126,6 @@ nums_div = []
 for num in range(3, 100, 3):
     nums_div.append(num)
 ```
-
-
 
 ### Operations on Lists
 
@@ -200,7 +183,7 @@ False
 Finally, two lists can be compared with the `>` or the `<` operator. List comparison works very similar to string comparison, in that it uses lexicographic ordering. We looked at this in the first chapter:
 
 >  **Lexicographic ordering**
->
+> 
 > First element from both lists are compared. If they differ this determines the outcome of the comparison. If they are equal, then the second element of both the lists are compared. This process continues until either list is exhausted.
 
 Some example comparisons:
@@ -213,8 +196,6 @@ print([] < [1])
 ```
 
 All four of them result in `True`. 
-
-
 
 ### Useful Functions
 
@@ -258,4 +239,7 @@ print(numbers)
 ```
 
 This gives `[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]` as the output.
+
+
+
 

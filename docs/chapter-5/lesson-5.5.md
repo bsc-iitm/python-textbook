@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-5/lesson-5.6.html">Lesson-5.6</a> 
-</span> 
-<hr> 
-
 # Lesson-5.5
-
-[TOC]
 
 ## Lists
 
@@ -69,7 +59,7 @@ assert fourth_ball == overs[2][3]
 
 Matrices are 2D objects. We can represent them as nested lists. Let us first populate a $3 \times 3$ matrix of zeros:
 
-<img src="../assets/images/img-040.png" style="zoom:50%;" />
+![Matrices](../assets/images/img-040.png)
 
 ```python
 mat = [ ]
