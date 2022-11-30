@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-5/lesson-5.1.html">Lesson-5.1</a>    
-</span> 
-<hr> 
-
 # Lesson-4.4
-
-[TOC]
 
 ## Function calling Function
 
@@ -46,15 +36,15 @@ Consider a simple function which doesn't call any other function within its body
 
 A function which calls another function inside it could find itself in one of the three states: ongoing, suspended or completed. They are color coded as follows. Now you see why it is called the traffic-signal theory:
 
-<img src="../assets/images/img-033.png" style="zoom:80%;" />
+![](../assets/images/img-033.png)
 
 Ongoing and completed have the same meaning. To understand the suspended state, consider the following diagrams that correspond to the code given above:
 
-<img src="../assets/images/img-037.png" style="zoom:50%;" />
+![](../assets/images/img-037.png)
 
 Each column here is called a stack. They all represent the same stack at different instants of time, i.e., the  columns here show the state of the stack at three different time instants. The horizontal arrow shows the passage of time. The vertical arrow indicates that each new function call gets added onto the top of the stack.
 
-<img src="../assets/images/img-038.png" style="zoom:50%;" />
+![](../assets/images/img-038.png)
 
 Re-introducing the code for reference:
 
@@ -90,13 +80,13 @@ def fact(n):
 
 In the `fact` function given above, when the interpreter comes to line-4, it sees a recursive call to `fact`. In such a case, it suspends or temporarily halts the execution of `fact(n)` and starts executing `fact(n - 1)`. Let us take a concrete example. This is what happens when `fact(4)` is called:
 
-<img src="../assets/images/img-034.png" style="zoom:80%;" />
+![](../assets/images/img-034.png)
 
 When `fact(0)` is called, there are no more recursive calls. This is because, the condition in line-2 evaluates to `True` and the value `1` is returned. This condition is called the base-case of the recursion. In the absence of a base-case, the recursion continues indefinitely and never terminates.
 
 
 
-<img src="../assets/images/img-035.png" style="zoom:80%;" />
+![](../assets/images/img-035.png)
 
 Once the base-case kicks in, `fact(0)` is done with its duty. So, the call transfers to the most recent suspended function. On the stack, we see that this is `fact(1)`. `fact(1)` now becomes active. When it returns the value `1`, its life comes to an end, so the control transfers to the most recent suspended function, which is `fact(2)`. This goes on until we reach `fact(4)`. When `fact(4)` returns the value `24`, all calls have been completed and we are done!
 
@@ -127,7 +117,7 @@ def fibo(n):
 
 Now, try calling `fibo(40)`. You will notice that it takes a very long time to compute the value. Why does this happen? This is because a lot of wasteful computation happens. Let us see why:
 
-<img src="../assets/images/img-036.png" style="zoom:80%;" />
+![](../assets/images/img-036.png)
 
 This is a different representation of the recursive computation and is called a recursion tree. Notice how some function calls appear multiple times. `fibo(3)`  and `fibo(1)` are being computed twice, `fibo(2)` is being computed thrice. For a larger value of `n` such as `50`, there would be even more wasteful computation.
 

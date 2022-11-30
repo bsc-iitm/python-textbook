@@ -18,9 +18,9 @@ In this lesson, we will explore the sequential nature of strings. This will also
 
 A string is a sequence of characters. Sequences support indexing. What do we mean by that? Consider the following image:
 
-<img src="/assets/images/img-027.png" style="zoom:70%;" />
+![Indexing](../assets/images/img-027.png)
 
-Given a word such as "world", we say that 'w' is the first letter in the word, 'o' is the second letter and so on. What we are referring to is the position of the letter in the word. The "index" is just a formal way of denoting the position of an element in the sequence. In computer science, starting the index from 0 is a widespread convention. This is called <a href="https://en.wikipedia.org/wiki/Zero-based_numbering" target=_blank>zero-based numbering</a>.
+Given a word such as "world", we say that 'w' is the first letter in the word, 'o' is the second letter and so on. What we are referring to is the position of the letter in the word. The "index" is just a formal way of denoting the position of an element in the sequence. In computer science, starting the index from 0 is a widespread convention. This is called [zero-based numbering](https://en.wikipedia.org/wiki/Zero-based_numbering).
 
 Once this is defined, we can go ahead and access characters that are at a given position in a string:
 
@@ -75,12 +75,13 @@ d
 Python supports negative indexing. This can be best understood using the following image:
 
 
-
-<img src="/assets/images/img-028.png" style="zoom:70%;" />
+<div class="center" markdown>
+![Negative indexing](../assets/images/img-028.png)
+</div>
 
 Think about it as follows. You keep moving down a flight of stairs starting from the top most step. When you reach the last step, you think that you cannot go down any further. At that moment, some invisible hand magically transports you back to the top most step and you begin your descent all over again. A good image that captures this analogy is the Penrose stairs:
 
-<img src="/assets/images/img-029.png" style="zoom:40%;" />
+![penrose stairs](../assets/images/img-029.png)
 
 Image credit: [Wikipedia](https://en.wikipedia.org/wiki/Penrose_stairs#/media/File:Impossible_staircase.svg)
 
@@ -115,7 +116,7 @@ BT_17_001@iitm.ac.in
 
 Given a string, we would like to extract the roll number of the student from it. How do we do this? Python provides a way to extract this information using the concept of slicing:
 
-<img src="/assets/images/img-030.png" style="zoom:40%;" />
+![slicing](../assets/images/img-030.png)
 
 ```python
 email = 'CS_10_014@iitm.ac.in'
@@ -154,7 +155,7 @@ print(domain)
 
 This outputs `iitm.ac.in`. Think for a while about the output. It is just a combination of negative indexing and slicing. Use the following visual to get a better understanding of slicing:
 
-<img src="/assets/images/img-031.png" style="zoom:60%;" />
+![slicing with negative indices](../assets/images/img-031.png)
 
 Using the above visual, we can now very easily process the following slices:
 
@@ -186,7 +187,7 @@ word = 'Some string'
 
 Here, we are not modifying the variable `word` in-place. Instead, we are assigning it an entirely new string literal in line-2. Thus there are two different string literals -  `'some string'` and `'Some string'` - and the former has NOT been transformed into the latter.
 
-<img src="/assets/images/img-032.png" style="zoom:50%;" />
+![Modifying variable word](../assets/images/img-032.png)
 
 The number on the arrow represents the line number in the code. `word` binds to the string on top after line-1. `word` binds to the string on the bottom after line-2. Note that there are two different strings here; one doesn't transform into the other. The concept of mutable and immutable objects will be explored in considerable detail in chapter-5.
 

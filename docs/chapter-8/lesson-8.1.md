@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-8/lesson-8.2.html">Lesson-8.2</a> 
-</span> 
-<hr>
-
-# Object Oriented Programming
-
-[toc]
+# Lesson 8.1
 
 ## Objects and Classes
 

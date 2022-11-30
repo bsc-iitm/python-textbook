@@ -6,10 +6,10 @@
 
 The anatomy of an operation is given below:
 
-<img src="/assets/images/img-011.png" style="zoom:80%;" />
+![Anatomy of an expression](../assets/images/img-011.png)
 
 The following table gives the symbols for arithmetic operators and the operations that they correspond to:
-<div style="display: flex; justify-content: center;" markdown>
+<div class="center" markdown>
 | Operator | Operation      |
 | -------- | -------------- |
 | +        | Addition       |
@@ -22,7 +22,7 @@ The following table gives the symbols for arithmetic operators and the operation
 </div>
 All the operators in the above table are binary, i.e., they operate on two operands. Let us now take a look at each operator:
 
-```python
+```pycon
 >>> 10 + 5
 15
 >>> 10 - 5
@@ -41,9 +41,9 @@ All the operators in the above table are binary, i.e., they operate on two opera
 
 The last three operators might be new. In more familiar terms, these are the mathematical operations that they correspond to:
 
-- `//` is called the floor division operator. `x // y` gives the quotient when `x` is divided by `y`. For example, `8 // 3` is `2`.
-- `%` is called the modulus operator. `x % y` gives the remainder when `x` is divided by `y`. For example, `10 % 3` is `1`. 
-- `**` is called the exponentiation operator. `x ** y` returns $x^y$.
+- `#!py //` is called the floor division operator. `#!py x // y` gives the quotient when `x` is divided by `y`. For example, `#!py 8 // 3` is `#!py 2`.
+- `#!py %` is called the modulus operator. `#!py x % y` gives the remainder when `x` is divided by `y`. For example, `#!py 10 % 3` is `#!py 1`. 
+- `#!py **` is called the exponentiation operator. `#!py x ** y` returns $x^y$.
 
 `/` and `//` are two different operators. `/` gives the complete result of division, while `//`  returns the quotient. For example, `5 / 2` results in `2.5` while `5 // 2` gives `2`. There are two more arithmetic operators of interest to us, unary plus and unary minus. These are the `+` and  `-` signs. Unlike the operators that we have seen so far, these two are unary operators, i.e., they operate on one operand. For example:
 

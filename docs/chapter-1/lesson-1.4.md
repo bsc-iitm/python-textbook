@@ -4,10 +4,7 @@
 
 We have been using Replit's console to type code so far. We will now move to the editor in Replit. The advantage of using the editor is that code typed here gets automatically saved. Think about it like Google Docs for code. The window to the left of the console is the editor. After typing code, click on the green `Run` button on the top. The output of the code will appear in the console on the right. We will completely shift to the editor from now. This means dropping the prompt symbol before each line of code.
 
-<video controls loop autoplay muted>
-    <source src="/assets/videos/editor.mp4" type="video/mp4" zoom=50%>
-</video>
-
+![type:video](../assets/videos/editor.mp4)
 
 
 ## Errors
@@ -53,7 +50,7 @@ Among software professionals, there is an alternative term used for errors in co
 
 Now, the coder closes the loop by running the code again. If the code throws another error, the whole process repeats.
 
-<img src="/assets/images/img-005.png" style="zoom:100%;" />
+![](../assets/images/img-005.png)
 
 Debugging code forms an important part of programming. While working on huge codebases it might take several hours or even days to fix bugs.
 
