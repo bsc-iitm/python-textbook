@@ -168,7 +168,7 @@ print(A < B)	# method-2
 
 The `A < B` operator checks if `A` is a proper subset of `B`. In this case `A` is not a proper subset of `B`, so the second print statement returns `False`.
 
-- Superset: $A$ is a superset of $B$ if every element of $B$ is present in $A$. It is denoted by $A \supe B$:
+- Superset: $A$ is a superset of $B$ if every element of $B$ is present in $A$. It is denoted by $A \supset B$:
 
 ```python
 A = {1, 3, 5}

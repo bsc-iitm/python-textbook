@@ -1,14 +1,4 @@
-<img src="../assets/images/logo.png" width=30% />
-
-<hr>
-<span style="display:flex; justify-content: space-between;">
-	<a href="../index.html">Home</a> <a href="../chapter-4/lesson-4.4.html">Lesson-4.4</a>    
-</span> 
-<hr> 
-
 # Lesson-4.3
-
-[TOC]
 
 ## Scope
 
@@ -145,7 +135,7 @@ def foo():
 
 We have used three different names here: `x`, `avar` and `foo`. The first two names represent variables that store literals. The last name represents a function. How does the Python interpreter internally process these names? It uses a concept called namespaces. A namespace can be thought of as a lookup table — dictionary to be precise — that maps names to objects.
 
-<img src="../assets/images/img-021.png" style="zoom:80%;" />
+![Namespace](../assets/images/img-021.png)
 
 ### globals()
 
@@ -163,7 +153,7 @@ print(globals())
 
 This returns the following output:
 
-<img src="../assets/images/img-022.png" style="zoom:80%;" />
+![](../assets/images/img-022.png)
 
 Ignore all the other details and just focus on the region highlighted in yellow. Notice that the names `x`, `avar` and `foo` are present in the namespace. `x`  and `avar` are mapped to the objects `1` and `cool` respectively, while `foo` is mapped to some complex looking object:  `<function foo at 0x7f8ecd2aa1f0>`. The number `0x7f8ecd2aa1f0` is the location in the memory where the function's definition is stored [[refer](https://stackoverflow.com/questions/19333598/in-python-what-does-function-at-mean)]. There is another way to check whether a given name is in a namespace:
 
@@ -239,7 +229,7 @@ The following image captures this idea. The `built-in` namespace has been ignore
 
 
 
-<img src="../assets/images/img-024.png" style="zoom:50%;" />
+![](../assets/images/img-024.png)
 
  With this context, let us revisit the problem that we looked at the end of the first section:
 
@@ -327,7 +317,7 @@ print(1)
 
 This will throw a `TypeError`. The name `print` has been hijacked and is being used as an `int` variable. How does Python allow this to happen?
 
-<img src="../assets/images/img-025.png" style="zoom:50%;" />
+![](../assets/images/img-025.png)
 
 When resolving names, the built-in namespace is the last stage in the interpreter's journey. Syntactically, nothing prevents us from using the name of a built-in function, such as `print`, as the name of a variable. But this is a very bad practice that should be avoided at any cost!
 
