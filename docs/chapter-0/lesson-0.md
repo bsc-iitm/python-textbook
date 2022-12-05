@@ -1,5 +1,19 @@
 # Lesson-0
 
+## What is Python?
+To answer this question, we need to first ask _What is a programming language?_ A **programming language** is essentially a language in which you can tell your computer what to do. You will understand what that means as start programming. Every programming language has its own strengths and purposes. **Python** is a general-purpose programming language that can be used for a wide variety of purposes including but not limited to data science, automation, machine learning and  software and web development. A typical python program to find the sum of the first 100 numbers looks like this:
+
+```python
+sum = 0
+for number in range(1, 101):
+  sum += number
+print(sum)
+```
+
+Do not worry too much about how the code work right now, we'll get into that over the course of the book. But now let's address a question you might have right now - why do we need to complicate things with programming languages to tell the computer what to do when we have simple applications like calculators that can do the same? Let's do a boring experiment: Let's add all the numbers from $1$ through $100$ on a calculator. How long did it take you? Now let's run the following program 
+
+<iframe frameborder="0" width="100%" height="300px" src="https://replit.com/@BharathValaboju/sum-of-first-hundred-numbers?embed=true"></iframe>
+
 ## Why learn Python?
 
 The strongest reason is utility. Python powers a large number of applications and is used by companies like Google, Netflix, Dropbox, Quora. A closely related reason is popularity. If a language is popular in the developer community, then there must be something good about it. In a recent [survey](https://insights.stackoverflow.com/survey/2020#technology-most-loved-dreaded-and-wanted-languages-loved) conducted by the company StackOverflow, Python was rated as the third most loved language.
