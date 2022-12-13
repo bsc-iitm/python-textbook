@@ -1,4 +1,4 @@
-# Lesson-0
+# Lesson-0.2
 
 ## What is Python?
 To answer this question, we need to first ask _What is a programming language?_ A **programming language** is essentially a language in which you can tell your computer what to do. You will understand what that means as start programming. Every programming language has its own strengths and purposes. **Python** is a general-purpose programming language that can be used for a wide variety of purposes including but not limited to data science, automation, machine learning and  software and web development. A typical python program to find the sum of the first 100 numbers looks like this:
@@ -35,7 +35,7 @@ The strongest reason is utility. Python powers a large number of applications an
 ![Stackoverflow survey](../assets/images/img-016.png)
 
 
-Around 66% of the 65,000 developers who responded to the survey are currently developing with Python and have expressed interest in continuing to develop with it. Another strong reason to learn Python is that it lets us create beautiful things such as this animation[^1]:
+Around 17.59% of the 71,467 developers who responded to the survey aren't currently developing with Python but have expressed interest in developing with it. Another strong reason to learn Python is that it lets us create beautiful things such as this animation[^1]:
 
 ![type:video](../assets/videos/sinx.mp4)
 
@@ -43,7 +43,29 @@ Around 66% of the 65,000 developers who responded to the survey are currently de
 
 Being able to create something like this is the end goal of this course. Musicians create music; musical instruments are their tools. Painters create paintings; the brush and the canvas are their tools. Coders create software; programming languages are their tools. Python is one of the most versatile and accessible languages out there. Python was designed to be human readable and easy while also being very powerful. This quality makes python the perfect first programming language. We will start from the basics and systematically cover the important aspects of the language. 
 
-!!! info "How easy is Python?"
+## History
+
+Python first appeared on the programming landscape 30 years ago, in February 1991. It was created as a hobby project by a Dutch programmer, Guido van Rossum at Stichting Mathematisch Centrum in the Netherlands
+as a successor of a language called ABC. He served as the _[benevolent dictator for life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life)_ of Python’s development until 2018, when he stepped down from the post. It was mainly developed for emphasis on code readability, and its syntax allows programmers to express concepts in fewer lines of code while still remaining powerful.[^2]
+
+[^2]: Watch this video of Guido Van Rossum narrating the story of python.
+
+<figure markdown>
+  ![Guido Van Rossum](../assets/images/guido.jpg)
+  <figcaption markdown>Guido Van Rossum at the Dropbox Headquarters in 2014[^3]</figcaption>
+</figure>
+
+[^3]: Image-Source: [Wikipedia](https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido-portrait-2014-drc.jpg)
+
+!!! info "How did python get its name?"
+    A popular question that gets asked often is how the language got its name. This is the answer from the official Python documentation:
+
+    > When he began implementing Python, Guido van Rossum was also reading the published scripts from [“Monty Python’s Flying Circus”](https://en.wikipedia.org/wiki/Monty_Python), a BBC comedy series from the 1970s. Van Rossum thought he needed a name that was short, unique, and slightly mysterious, so he decided to call the language Python.
+
+
+Python is 30 years old. Programmers who boarded the Python-bus 30 years back lovingly talk of it as though it were a friend. This is not an exaggeration! This is a language that has been built by people like you and me, and is being used by thousands of people around the globe. Let us jump in with an open mind and see what it has to offer!
+
+<!-- !!! info "How easy is Python?"
     Python has a vast collection of libraries that makes it easy to implement complex tasks. This is well described by this cheeky comic[^2] that pops up when you enter `#!py import antigravity` in IDLE.
 
 
@@ -51,8 +73,22 @@ Being able to create something like this is the end goal of this course. Musicia
         ![Python Web comic](https://imgs.xkcd.com/comics/python.png)
     </div>
 
-    [^2]: Credit to [xkcd.com](https://xkcd.com/353) for the comic
+    [^2]: Credit to [xkcd.com](https://xkcd.com/353) for the comic -->
 
+
+
+Now let's get into the serious business of setting up python so that we can actually start coding
+
+## Setting up Replit
+
+Replit is an online environment where we can write code. It is an ideal place to learn programming and we will be using it extensively in this course. Head to http://www.replit.com/ and sign up using your Online Degree account. Replit provides an excellent [tutorial](https://docs.replit.com/tutorials/01-introduction-to-the-repl-it-ide) to get you started.
+
+## Installing Python on your System
+
+However, if you wish to use Python on your system, you can install it from [here](https://www.python.org/downloads/). You can refer to this [guide](https://www.javatpoint.com/how-to-install-python) to get a step-by-step process of installing Python. Having Python on your system will be useful in the subjects that you'll encounter in the Diploma level. It is recommended that you install python as you will get to know your system better.
+
+!!! info "For windows users"
+    Make sure to select `add python.exe to PATH` when you install python. It will allow you to use python from the terminal.
 
 
 ## Lessons
@@ -94,30 +130,10 @@ Programming courses are among the few courses where the learner has an upper han
 
 We will be using Python-3.8 or higher throughout these lessons. If some of you are already familiar with Python and are used to Python-2, it is strongly recommended that you shift to Python-3. This is not an arbitrary choice as Python-2 has reached the end of its life.
 
-## Setting up Replit
+!!! info "Python 2 vs Python 3"
+    The release of python 3 was very controversial. Python 3 underwent drastic changes that fixed various design flaws in the language. However this meant that it was backwards incompatible with python 2 [^4] which meant that the millions of lines of code already written in python 2 wouldn't work with python 3. You can learn more about the reasons python 3 was made in this [blog post](https://snarky.ca/why-python-3-exists/). Do not be worried if you don't understand most of it. Come back when we finally explain unicode.
 
-Replit is an online environment where we can write code. It is an ideal place to learn programming and we will be using it extensively in this course. Head to http://www.replit.com/ and sign up using your Online Degree account. Replit provides an excellent [tutorial](https://docs.replit.com/tutorials/01-introduction-to-the-repl-it-ide) to get you started.
-
-## Installing Python on your System
-
-However, if you wish to use Python on your system, you can install it from [here](https://www.python.org/downloads/). You can refer to this [guide](https://www.javatpoint.com/how-to-install-python) to get a step-by-step process of installing Python. Having Python on your system will be useful in the subjects that you'll emcounter in the Diploma level.
-
-## History
-
-Python first appeared on the programming landscape 30 years ago, in February 1991. It was created as a hobby project by a Dutch programmer, Guido van Rossum. He served as the _[benevolent dictator for life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life)_ of Python’s development until 2018, when he stepped down from the post.
-
-<figure markdown>
-  ![Guido Van Rossum](../assets/images/guido.jpg)
-  <figcaption markdown>Guido Van Rossum at the Dropbox Headquarters in 2014[^3]</figcaption>
-</figure>
-
-[^3]: Image-Source: [Wikipedia](https://en.wikipedia.org/wiki/Guido_van_Rossum#/media/File:Guido-portrait-2014-drc.jpg)
-
-A popular question that gets asked often is how the language got its name. This is the answer from the official Python documentation:
-
-> When he began implementing Python, Guido van Rossum was also reading the published scripts from [“Monty Python’s Flying Circus”](https://en.wikipedia.org/wiki/Monty_Python), a BBC comedy series from the 1970s. Van Rossum thought he needed a name that was short, unique, and slightly mysterious, so he decided to call the language Python.
-
-Python is 30 years old. Programmers who boarded the Python-bus 30 years back lovingly talk of it as though it were a friend. This is not an exaggeration! This is a language that has been built by people like you and me, and is being used by thousands of people around the globe. Let us jump in with an open mind and see what it has to offer!
+[^4]: You can read about the changes introduced in python 3 [here](https://docs.python.org/3/whatsnew/3.0.html). It's an interesting insight but you might not understand everything so come back when you learn more about python.
 
 ## Explore
 
