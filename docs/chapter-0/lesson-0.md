@@ -96,7 +96,7 @@ We will be using Python-3.8 or higher throughout these lessons. If some of you a
 
 ## Setting up Replit
 
-Replit is an online environment where we can write code. It is an ideal place to learn programming and we will be using it extensively in this course. Head to http://www.replit.com/ and sign up using your Online Degree account. Replit provides an excellent [tutorial](https://docs.replit.com/tutorials/01-introduction-to-the-repl-it-ide) to get you started.
+Replit is an online environment where we can write code. It is an ideal place to learn programming and we will be using it extensively in this course. Head to http://www.replit.com/ and sign up using your Online Degree account. Replit provides an excellent [tutorial](https://docs.replit.com/getting-started/intro-replit) to get you started.
 
 ## Installing Python on your System
 
@@ -125,4 +125,4 @@ Python is 30 years old. Programmers who boarded the Python-bus 30 years back lov
 2. Have a look at this interesting [interview](https://blog.dropbox.com/topics/work-culture/-the-mind-at-work--guido-van-rossum-on-how-python-makes-thinking) of Guido Van Rossum. This is a blog maintained by Dropbox. Another trivia: Guido worked at Dropbox for six and a half years. 
 3. Try to watch documentaries and interviews on the web where Guido talks about how Python came into existence. It is always good to know about some non-technical aspects of the language, such as its history and something about the people who were behind its development. It gives a humanistic flavor to technology. We often forget that a lot of software is written by humans, for humans.
 4. In the next few weeks to come, [StackOverflow](https://stackoverflow.com/) might become the most visited website by most of you. Some of you might be familiar with it, but for the others, StackOverflow is a question-answer forum for programming related questions. It is extremely popular not just among beginners but even experienced developers. Do check it out, but use it wisely. Refrain from using it to get answers to assignment questions; you won't learn anything that way.
-5. You can also look into the official documentation on the python [website]((https://docs.python.org/3/)).
+5. You can also look into the official documentation on the python [website](https://docs.python.org/3/).
