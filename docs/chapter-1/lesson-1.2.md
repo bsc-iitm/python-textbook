@@ -178,14 +178,14 @@ True
 
 ### Operator Chaining
 
-    Python supports chaining relational operators. This enables you to evaluate chains of comparison without having to use logical operators. 
-    ```python
-    >>> 10 < 11 <= 12
-    True
-    # is the same as
-    >>> 10 < 11 and 11 <= 12
-    True
-    ```
+Python supports chaining relational operators. This enables you to evaluate chains of comparison without having to use logical operators. 
+```python
+>>> 10 < 11 <= 12
+True
+# is the same as
+>>> 10 < 11 and 11 <= 12
+True
+```
 
 ## Expressions
 
