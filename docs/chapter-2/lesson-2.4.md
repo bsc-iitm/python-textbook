@@ -8,7 +8,8 @@ A library is a collection of functions that share a common theme. This is a loos
 
 Consider the following problem:
 
-> In the year $3000$, $15^{\text{th}}$​ August will fall on which day of the week?
+!!! question "Problem"
+    In the year $3000$, $15^{\text{th}}$​ August will fall on which day of the week?
 
 Python to the rescue:
 
@@ -139,7 +140,6 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
-These are some nuggets of wisdom from Tim Peters, a "major contributor to the Python programming language" [refer](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)). Some of the points make immediate sense, such as "readability counts".
+These are some nuggets of wisdom from Tim Peters, a "major contributor to the Python programming language" [^1]. Some of the points make immediate sense, such as "readability counts".
 
-
-
+[^1]: [The brain behind the Zen](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer))
