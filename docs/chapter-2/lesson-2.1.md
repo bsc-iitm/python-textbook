@@ -34,9 +34,9 @@ The value after updating x is 2
 
 The syntax of the assignment statement is as follows:
 
-> ```python
-  variable_name = expression
-  ```
+```python
+variable_name = expression
+```
 
 The assignment operator works from right to left. That is, the expression on the right is evaluated first. The value of this expression is assigned to the variable on the left. For example:
 
@@ -86,7 +86,7 @@ The assignment operator is used for creating or updating variables whereas the e
 
 
 !!! info "Dynamic Typing"
-    Python supports what is called dynamic typing. In a dynamically typed language, a variable is simply a value bound to a name; the value has a type — like `int` or `str` — but the variable itself doesn't [[refer](https://wiki.python.org/moin/Why%20is%20Python%20a%20dynamic%20language%20and%20also%20a%20strongly%20typed%20language)]. For example:
+    Python supports what is called dynamic typing. In a dynamically typed language, a variable is simply a value bound to a name; the value has a type — like `int` or `str` — but the variable itself doesn't [^1]. For example:
 
     ```python linenums="1"
     a = 1
@@ -105,7 +105,8 @@ The assignment operator is used for creating or updating variables whereas the e
     <class 'str'>
     ```
     In the above example, `a` was initially bound to a value of type `#!py int`. After its update in line 3, it was bound to a value of type `#!py float` and after line 5, it becomes a `#!py str`. The image in the previous section will give a clearer picture of why this is the case. 
-
+[^1]: 
+    Interestingly Python is both a dynamically typed and strongly typed language, head to this [wiki page](https://wiki.python.org/moin/Why%20is%20Python%20a%20dynamic%20language%20and%20also%20a%20strongly%20typed%20language) if you'd like to learn more about this.
 
 
 ### Referencing versus Defining
@@ -147,7 +148,10 @@ and = 2
 ##### Alarm! Wrong code snippet! #####
 ```
 
-Along with this restriction, there are certain other rules which have to be followed while choosing the names of variables in Python [[refer](https://www.w3schools.com/python/gloss_python_variable_names.asp)]:
+Along with this restriction, there are certain other rules which have to be followed while choosing the names of variables in Python [^2]:
+
+[^2]:
+    For more examples of legal and illegal variable names in python [click here](https://www.w3schools.com/python/gloss_python_variable_names.asp).
 
 * A variable name can only contain alpha-numeric (alphabets and numbers) characters and underscores:
     * a - z
