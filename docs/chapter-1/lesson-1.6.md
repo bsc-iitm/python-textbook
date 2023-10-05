@@ -197,7 +197,8 @@ The number on the arrow represents the line number in the code. `word` binds to 
 
 Consider the following problem:
 
-> Accept a sentence as input from the user and output the same sentence with the first letter in the sentence capitalized.
+!!! question "Problem"
+  Accept a sentence as input from the user and output the same sentence with the first letter in the sentence capitalized.
 
 For example, if the input is `'this is a chair.'`, the output should be `'This is a chair.'`.
 
@@ -220,7 +221,8 @@ a.capitalize()
 
 Getting back to the previous code snippet, `sentence.capitalize()` returns a string, which is then assigned to a new variable called `cap_sentence`. There are plenty of other methods associated with strings. Let us look at one more method which features in the solution to this interesting problem:
 
-> Check whether a given string is a valid name of a person.
+!!! question "Problem"
+  Check whether a given string is a valid name of a person.
 
 It is safe to assume that we are not thinking about Elon Musk's son, in which case, a name usually has only alphabets without any special characters and numbers. The method `isalpha` checks for just this requirement:
 
