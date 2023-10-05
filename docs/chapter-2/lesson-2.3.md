@@ -74,8 +74,6 @@ Lines 3-5 in the following codes make up the **if-block**. Lines 4 and 5 which a
 
 Let us add one more level of complexity to the problem.
 
-**Problem**
-
 !!! question "Problem"
     Accept an integer as input from the user. If the number is greater than or equal to zero, print: `non-negative`. If the number is less than zero, print `negative`.
 
@@ -193,7 +191,8 @@ Some features to note:
 
 Consider the following problem:
 
-> Accept three distinct integers as input from the user. If the numbers have been entered in ascending order, print `in ascending order`. If not, print `not in ascending order`.
+!!! question "Problem"
+    Accept three distinct integers as input from the user. If the numbers have been entered in ascending order, print `in ascending order`. If not, print `not in ascending order`.
 
 An incomplete solution is given below:
 
@@ -211,7 +210,7 @@ else:
 
 The problem with the above solution is that it doesn't check if `y < z`. So, for an input like `x, y, z = 1, 3, 2`, it will print `in ascending order`, which is incorrect. The complete solution is given below:
 
-```python
+```python linenums="1"
 x = int(input())
 y = int(input())
 z = int(input())
