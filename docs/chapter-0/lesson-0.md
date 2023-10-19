@@ -96,7 +96,7 @@ We will be using Python-3.8 or higher throughout these lessons. If some of you a
 
 ## Setting up Replit
 
-Replit is an online environment where we can write code. It is an ideal place to learn programming and we will be using it extensively in this course. Head to http://www.replit.com/ and sign up using your Online Degree account. Replit provides an excellent [tutorial](https://docs.replit.com/getting-started/intro-replit) to get you started.
+Replit is an online environment where we can write code. It is an ideal place to learn programming and we will be using it extensively in this course. Head to [replit.com](http://www.replit.com/) and sign up using your Online Degree account. Replit provides an excellent [tutorial](https://docs.replit.com/getting-started/intro-replit) to get you started.
 
 ## Installing Python on your System
 
