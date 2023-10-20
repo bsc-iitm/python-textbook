@@ -24,7 +24,7 @@ Given a word such as "world", we say that 'w' is the first letter in the word, '
 
 Once this is defined, we can go ahead and access characters that are at a given position in a string:
 
-```python
+```python linenums="1"
 word = 'world'
 print(word[0])
 print(word[1])
@@ -45,7 +45,7 @@ d
 
 Given a variable, say `word`, that holds a string literal, `word[i]` gives the character at index `i` in the string. Informally, this would be the letter at position `i + 1` in the string. Now, let us turn to the following code:
 
-```python
+```python linenums="1"
 word = 'world'
 print(word[5])
 ```
@@ -61,7 +61,7 @@ IndexError: string index out of range
 
 The interpreter throws an `IndexError` as we are trying to access an index that is out of range. The length of the string is `5`. Since we start the index from `0`, the last character will be at index `4`. Anything greater than that is going to throw an error. Now, let us turn to the other end of the spectrum:
 
-```python
+```python linenums="1"
 word = 'world'
 print(word[-1])
 ```
@@ -87,7 +87,7 @@ Image credit: [Wikipedia](https://en.wikipedia.org/wiki/Penrose_stairs#/media/Fi
 
 An index of `-1` points to the last element in the sequence. From this, we keep moving backwards until we reach the first element in the sequence which is at index `-5`.
 
-```python
+```python linenums="1"
 word = 'world'
 print(word[-1])
 # ... please add the remaining lines!
@@ -118,7 +118,7 @@ Given a string, we would like to extract the roll number of the student from it.
 
 ![slicing](../assets/images/img-030.png)
 
-```python
+```python linenums="1"
 email = 'CS_10_014@iitm.ac.in'
 roll = email[6 : 9]
 print(roll)
@@ -128,7 +128,7 @@ The slicing operator -  `start:stop` - will be our knife in slicing sequences! L
 
 Few more examples using the same string:
 
-```python
+```python linenums="1"
 email = 'CS_10_014@iitm.ac.in'
 branch = email[0 : 2]
 year = email[3 : 5]
@@ -139,7 +139,7 @@ college = email[10 : 14]
 
 Slicing is quite powerful. If we want the institute roll number, including the branch, we could do the following:
 
-```python
+```python linenums="1"
 email = 'CS_10_014@iitm.ac.in'
 in_roll = email[ : 9]
 print(in_roll)
@@ -147,7 +147,7 @@ print(in_roll)
 
 This outputs `CS_10_014`. If no starting index is specified in the slice, then `start` will default to `0`. Likewise, if no stopping index is specified, `stop` will default to the end of the string or `len(email)`. Now, consider:
 
-```python
+```python linenums="1"
 email = 'CS_10_014@iitm.ac.in'
 domain = email[-10 : ]
 print(domain)
@@ -159,7 +159,7 @@ This outputs `iitm.ac.in`. Think for a while about the output. It is just a comb
 
 Using the above visual, we can now very easily process the following slices:
 
-```python
+```python linenums="1"
 word = 'world'
 print(word[-4 : 3])
 print(word[1 : -2])
@@ -171,7 +171,7 @@ print(word[1 : -2])
 
 Execute the following code and observe the output:
 
-```python
+```python linenums="1"
 word = 'some string'
 word[0] = 'S'
 ```
@@ -180,7 +180,7 @@ The interpreter throws a `TypeError` with the following error message: `'str' ob
 
 Note that this is different from the following:
 
-```python
+```python linenums="1"
 word = 'some string'
 word = 'Some string'
 ```
@@ -197,14 +197,14 @@ The number on the arrow represents the line number in the code. `word` binds to 
 
 Consider the following problem:
 
-!!! question "Problem"
+!!! question " "
     Accept a sentence as input from the user and output the same sentence with the first letter in the sentence capitalized.
 
 For example, if the input is `'this is a chair.'`, the output should be `'This is a chair.'`.
 
 **Solution**
 
-```python
+```python linenums="1"
 sentence = input()
 cap_sentence = sentence.capitalize()
 print(cap_sentence)
@@ -212,7 +212,7 @@ print(cap_sentence)
 
 `capitalize` is called a method. Methods are essentially functions, but they are defined for specific objects. So, they have to be called by using the object for which they have been defined. In the case of `capitalize`, it is a method that is defined for the `str` data type. If we try to call it using an `int` object, we will get an error:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet!
 a = 1
 a.capitalize()
@@ -221,12 +221,12 @@ a.capitalize()
 
 Getting back to the previous code snippet, `sentence.capitalize()` returns a string, which is then assigned to a new variable called `cap_sentence`. There are plenty of other methods associated with strings. Let us look at one more method which features in the solution to this interesting problem:
 
-!!! question "Problem"
+!!! question " "
     Check whether a given string is a valid name of a person.
 
 It is safe to assume that we are not thinking about Elon Musk's son, in which case, a name usually has only alphabets without any special characters and numbers. The method `isalpha` checks for just this requirement:
 
-```python
+```python linenums="1"
 # name is some pre-defined string
 valid = name.isalpha()
 print(valid)

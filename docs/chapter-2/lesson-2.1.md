@@ -6,7 +6,7 @@
 
 Variables are containers that are used to store values. Variables in Python are defined by using the assignment operator `=`. For example:
 
-```python
+```python linenums="1"
 x = 1
 y = 100.
 z = "good"
@@ -14,7 +14,7 @@ z = "good"
 
 Variables can also be updated using the assignment operator:
 
-```python
+```python linenums="1"
 x = 1
 print('The initial value of x is', x)
 x = 2
@@ -40,7 +40,7 @@ variable_name = expression
 
 The assignment operator works from right to left. That is, the expression on the right is evaluated first. The value of this expression is assigned to the variable on the left. For example:
 
-```python
+```python linenums="1"
 x = 1 + 2 * 3 / 2
 print(x)
 ```
@@ -53,13 +53,12 @@ The output is:
 
 Having a literal to the left of the assignment operator will result in an error:
 
-<div class="error_code" markdown>
-  ```python
-  ##### Alarm! Wrong code snippet! #####
-  3 = x
-  ##### Alarm! Wrong code snippet! #####
-  ```
-</div>
+
+```python linenums="1"
+##### Alarm! Wrong code snippet! #####
+3 = x
+##### Alarm! Wrong code snippet! #####
+```
 
 This will throw the following error:
 
@@ -76,7 +75,7 @@ The numbers on the arrow correspond to the line numbers in the code. The variabl
 
 As a final point, the assignment operator should not be confused with the equality operator:
 
-```python
+```python linenums="1"
 x = 2	# this is the assignment operator
 x == 2	# this is the equality operator
 ```
@@ -88,23 +87,25 @@ The assignment operator is used for creating or updating variables whereas the e
 !!! info "Dynamic Typing"
     Python supports what is called dynamic typing. In a dynamically typed language, a variable is simply a value bound to a name; the value has a type — like `int` or `str` — but the variable itself doesn't [^1]. For example:
 
-    ```python linenums="1"
-    a = 1
-    print(type(a))
-    a = 1 / 2
-    print(type(a))
-    a = "IIT Madras"
-    print(type(a))
-    ```
+```python linenums="1"
+a = 1
+print(type(a))
+a = 1 / 2
+print(type(a))
+a = "IIT Madras"
+print(type(a))
+```
 
-    The output is:
+The output is:
 
-    ```
-    <class 'int'>
-    <class 'float'>
-    <class 'str'>
-    ```
-    In the above example, `a` was initially bound to a value of type `#!py int`. After its update in line 3, it was bound to a value of type `#!py float` and after line 5, it becomes a `#!py str`. The image in the previous section will give a clearer picture of why this is the case. 
+```
+<class 'int'>
+<class 'float'>
+<class 'str'>
+```
+
+In the above example, `a` was initially bound to a value of type `#!py int`. After its update in line 3, it was bound to a value of type `#!py float` and after line 5, it becomes a `#!py str`. The image in the previous section will give a clearer picture of why this is the case. 
+
 [^1]: 
     Interestingly Python is both a dynamically typed and strongly typed language, head to this [wiki page](https://wiki.python.org/moin/Why%20is%20Python%20a%20dynamic%20language%20and%20also%20a%20strongly%20typed%20language) if you'd like to learn more about this.
 
@@ -113,7 +114,7 @@ The assignment operator is used for creating or updating variables whereas the e
 
 When a variable that has already been defined is used in an expression, we say that the variable is being referenced. For example:
 
-```python
+```python linenums="1"
 x = 2
 print(x * x, 'is the square of', x)
 ```
@@ -130,8 +131,6 @@ This is the output:
 NameError: name 'someVar' is not defined
 ```
 
-
-
 ### Keywords and Naming Rules
 
 Keywords are certain words in the Python language that have a special meaning. Some of them are listed below:
@@ -142,7 +141,7 @@ not, and, or, if, for, while, in, is, def, class
 
 We have already seen some of them - `not, and, or`. We will come across all these keywords in upcoming chapters. Keywords cannot be used as names for variables. For example, the following line of code will throw a SyntaxError when executed:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet! #####
 and = 2
 ##### Alarm! Wrong code snippet! #####
@@ -168,7 +167,7 @@ A few observations that directly follow from the above rules:
 
 Note that these are not merely conventions. Violating any one of these rules will result in a `SyntaxError`. As an example, the following code will throw a `SyntaxError` when executed:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet! #####
 3a = 1
 ##### Alarm! Wrong code snippet! #####
@@ -177,8 +176,6 @@ Note that these are not merely conventions. Violating any one of these rules wil
 ```
 SyntaxError: invalid decimal literal
 ```
-
-
 
 ### Reusing Variables
 
@@ -191,7 +188,7 @@ z=(x+1)(y+1)
 $$
 This can be computed as follows:
 
-```python
+```python linenums="1"
 x = 10
 y = x ** 2
 z = (x + 1) * (y + 1)
@@ -204,7 +201,7 @@ z = (x + 1) * (y + 1)
 
 Consider the following statement that defines two variables `x` and `y`.
 
-```python
+```python linenums="1"
 x = 1
 y = 2
 ```
@@ -223,7 +220,7 @@ x, y = 2, 1
 
 To understand how this works, we need to get into the concept of packing and unpacking tuples, which we will visit in chapter 5. Treat this as a useful feature for the time being. Another way of doing multiple assignments is to initialize multiple variables with the same value:
 
-```python
+```python linenums="1"
 x = y = z = 10
 print(x, y, z)
 ```
@@ -236,7 +233,7 @@ The output is:
 
 Though `x`, `y` and `z` start off by being equal, the equality is broken the moment even one of the three variables is updated:
 
-```python
+```python linenums="1"
 x = x * 1
 y = y * 2
 z = z * 3
@@ -249,13 +246,11 @@ The output is:
 10 20 30
 ```
 
-
-
 ### Assignment Shortcuts
 
 Execute the code given below and observe the output. What do you think is happening?
 
-```python
+```python linenums="1"
 x = 1
 x += 1
 print(x)
@@ -265,10 +260,10 @@ print(x)
 
 > `x += a`
 >
-> Increment the value of  `x` by `a`. In other words, add `a` to `x` and store the result in `x`. It is equivalent to the statement `x = x + a`. 
+> Increments the value of  `x` by `a`. In other words, add `a` to `x` and store the result in `x`. It is equivalent to the statement `x = x + a`. 
 
 This is not just limited to the addition operator. The following table gives a summary of the shortcuts for some of the arithmetic operators:
-
+<div style="display: flex; justify-content: center;" markdown>
 | Shortcut  | Meaning      |
 | --------- | ------------ |
 | `x += a`  | `x = x + a`  |
@@ -277,10 +272,11 @@ This is not just limited to the addition operator. The following table gives a s
 | `x /= a`  | `x = x / a`  |
 | `x %= a`  | `x = x % a`  |
 | `x **= a` | `x = x ** a` |
+</div>
 
 Note that the arithmetic operator must always come before the assignment operator in a shortcut. Swapping them will not work:
 
-```python
+```python linenums="1"
 x = 1
 x =+ 1
 print(x)

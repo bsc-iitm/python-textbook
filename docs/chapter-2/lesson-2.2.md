@@ -6,7 +6,7 @@ Accepting input from the user routinely happens in programming. Any piece of sof
 
 Python provides a built-in function called `#!py input()` to accept input from the user. This is a simple yet powerful function:
 
-```python
+```python linenums="1"
 x = input()
 print('The input entered by the user is', x)
 ```
@@ -20,14 +20,14 @@ The input entered by the user is 1
 
 Sometimes we may want to prompt the user to enter a particular type of input. This can be done by passing the instruction as an argument to the input function:
 
-```python
+```python linenums="1"
 x = input('Enter an integer between 0 and 10: ')
 print('The number entered by the user is', x)
 ```
 
 Let us now look at the type of the variable `x`:
 
-```python
+```python linenums="1"
 x = input()
 print('The input entered by the user is of type', type(x))
 ```

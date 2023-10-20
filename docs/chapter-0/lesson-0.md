@@ -3,7 +3,7 @@
 ## What is Python?
 To answer this question, we need to first ask _What is a programming language?_ A **programming language** is essentially a language in which you can tell your computer what to do. You will understand what that means as start programming. Every programming language has its own strengths and purposes. **Python** is a general-purpose programming language that can be used for a wide variety of purposes including but not limited to data science, automation, machine learning and  software and web development. A typical python program to find the sum of the first 100 numbers looks like this:
 
-```python
+```python linenums="1"
 sum = 0
 for number in range(1, 101):
   sum += number
