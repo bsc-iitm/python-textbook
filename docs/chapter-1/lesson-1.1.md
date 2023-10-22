@@ -40,7 +40,7 @@ Hello World!
 
 The sentence enclosed by the parentheses of the `#!py print()` function is called a **string**. A **string** is a sequence of characters enclosed in quotes. Strings can either be in single quotes or double quotes. However, a single quote can't be matched against a double quote to enclose a string. We have used single quotes in line 1 and double quotes in line 3. Both lines give identical outputs. The ability to use both single quotes and double quotes comes in handy in situations like this:
 
-!!! question "Problem" 
+!!! question " " 
     Print a string that has an apostrophe in it:
 
 ```pycon

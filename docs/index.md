@@ -146,7 +146,6 @@ Mathematics and Programming
 ## Chapter-4: Functions
 
 [Lesson-4.1](chapter-4/lesson-4.1.md)
-<a href="chapter-4/lesson-4.1.html">Lesson-4.1</a>
 
 - Introduction
 - Examples
@@ -169,7 +168,7 @@ Mathematics and Programming
   - globals
 - Scope and Namespaces
 
-[Lesson-4.3](chapter-4/lesson-4.4.md)
+[Lesson-4.4](chapter-4/lesson-4.4.md)
 
 - Recursion
 - Caution in Recursion
@@ -178,7 +177,7 @@ Mathematics and Programming
 
 ## Chapter-5: Lists and Tuples
 
-[Lesson-4.4](chapter-5/lesson-5.1.md)
+[Lesson-5.1](chapter-5/lesson-5.1.md)
 
 - Lists
   - Introduction
@@ -309,7 +308,6 @@ Mathematics and Programming
 ## Chapter-8: Object Oriented Programming
 
 [Lesson-8.1](chapter-8/lesson-8.1.md)
-<a href="chapter-8/lesson-8.1.html">Lesson-8.1</a>
 
 - Objects and Classes
 - OOP in Python: an example

@@ -4,7 +4,7 @@
 
 Suppose you had to solve the following problem:
 
-!!! question "Problem" 
+!!! question " " 
     Accept an integer as input from the user. If the number is greater than zero, print `positive` and if number is less than zero, print `negative`, else print `zero`.
 
 This problem can solved by so called Conditional Statements. Conditional Statements is a very important concept in Computer Science in general and are the building blocks to solutions for very complex problems. Conditional Statements, as the name suggests, allow for conditional execution of code. We will we see what this means in detail in the coming sections.
@@ -13,7 +13,7 @@ This problem can solved by so called Conditional Statements. Conditional Stateme
 ### if statement
 
 Let's start off with a simpler version of the earlier problem
-!!! question "Problem" 
+!!! question " " 
     Accept an integer as input from the user. If the number is greater than zero, print `non-negative`.
 
 `#!py if` is a keyword in Python. The text adjacent to `#!py if` is a boolean expression, usually called the **if-condition** or just the **condition**. Line-3 is the body of `#!py if`. If the condition evaluates to `True`, then line-3 is executed. If it is `False`, then line-3 doesn't get executed. The following diagram captures the terms that have been introduced:
@@ -49,7 +49,7 @@ Lines 3-5 in the following codes make up the **if-block**. Lines 4 and 5 which a
     ```
     The condition is `True`. So lines 4 and 5 are going to be executed. Once we exit the if-block, the interpreter will resume execution from line 6. The output will be:
     
-    ``` linenums="1"
+    ```
     non-negative
     inside if
     outside if
@@ -66,7 +66,7 @@ Lines 3-5 in the following codes make up the **if-block**. Lines 4 and 5 which a
     ```
     The condition is `False`. So, lines 4 and 5 are *not* going to be executed. The interpreter will skip the body of `if` and directly move to line 6. The output will be
 
-    ``` linenums="1"
+    ```
     outside if
     ```
 
@@ -74,9 +74,7 @@ Lines 3-5 in the following codes make up the **if-block**. Lines 4 and 5 which a
 
 Let us add one more level of complexity to the problem.
 
-**Problem**
-
-!!! question "Problem"
+!!! question " "
     Accept an integer as input from the user. If the number is greater than or equal to zero, print: `non-negative`. If the number is less than zero, print `negative`.
 
 `#!py else` is a keyword in Python. When the if-condition evaluates to `True`, the statements inside the body of the if-block are evaluated. When the condition evaluates to `False`, the statements inside the body of the else-block are evaluated.
@@ -105,7 +103,7 @@ Points to remember:
 
 The following code demonstrates the last two points:
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet! #####
 else:
     print(1)
@@ -126,7 +124,7 @@ else x < y:
 
 This final tool will help us solve the original problem:
 
-!!! question "Problem" 
+!!! question " " 
     Accept an integer as input from the user. If the number is greater than zero, print `positive` and if number is less than zero, print `negative`, else print `zero`.
 
 `#!py elif` is a keyword in Python. It is a shorthand for else-if. With this final weapon in our conditional statements arsenal, we can solve the problem as thus
@@ -171,13 +169,13 @@ A visual representation of the process is given below:
 
 The general syntax:
 
-```
-if <condition-1>:
-    <statement-1>
-elif <condition-2>:
-	<statement-2>
+```python linenums="1"
+if <condition_1>:
+    <statement_1>
+elif <condition_2>:
+	<statement_2>
 else:
-    <statement-3>
+    <statement_3>
 ```
 
 Some features to note:
@@ -193,11 +191,12 @@ Some features to note:
 
 Consider the following problem:
 
-> Accept three distinct integers as input from the user. If the numbers have been entered in ascending order, print `in ascending order`. If not, print `not in ascending order`.
+!!! question " "
+    Accept three distinct integers as input from the user. If the numbers have been entered in ascending order, print `in ascending order`. If not, print `not in ascending order`.
 
 An incomplete solution is given below:
 
-```python
+```python linenums="1"
 # Incomplete solution
 x = int(input())
 y = int(input())
@@ -211,7 +210,7 @@ else:
 
 The problem with the above solution is that it doesn't check if `y < z`. So, for an input like `x, y, z = 1, 3, 2`, it will print `in ascending order`, which is incorrect. The complete solution is given below:
 
-```python
+```python linenums="1"
 x = int(input())
 y = int(input())
 z = int(input())
@@ -235,7 +234,7 @@ Having a conditional statement inside another conditional statement is called ne
 
 Consider the following snippet of code:
 
-```python
+```python linenums="1"
 x = int(input())
 if x % 5 == 0:
     output = 'the number is divisible by 5'

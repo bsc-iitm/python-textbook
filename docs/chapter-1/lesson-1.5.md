@@ -26,7 +26,7 @@ third line
 
 The following code will throw a `SyntaxError`:
 
-```python
+```python linenums="1"
 x = 'first line
 second line
 third line'
@@ -35,7 +35,7 @@ print(x)
 
 This is where `'''` comes in:
 
-```python
+```python linenums="1"
 x = '''first line
 second line
 third line'''
@@ -56,21 +56,21 @@ The `\n` character that you see above is called a newline character. Head to the
 
 The length of a string is the number of characters in it. Python provides a built-in function called `len` to find the length of a string:
 
-```python
+```python linenums="1"
 x = 'good'
 print(len(x))
 ```
 
 The code given above will give 4 as the output. If you are familiar with other programming languages, such as C, you might be aware of a character data type. Python doesn't have a separate data type for characters. A character in Python is represented by a string of length 1. In the following examples, `x` and `y` are strings of length 1.
 
-```python
+```python linenums="1"
 x = 'a'
 y = 'b'
 ```
 
 We can also define empty strings:
 
-```python
+```python linenums="1"
 x = ''
 print(len(x))
 ```
@@ -85,7 +85,7 @@ As expected, the length of the empty string is 0.
 
 We can concatenate two strings using the `+` operator. Concatenation is just a fancy term for joining two strings together:
 
-```python
+```python linenums="1"
 string1 = 'first'
 string2 = ','
 string3 = 'second'
@@ -105,7 +105,7 @@ first,second
 
 We can make multiple copies of a string and string them all together using the `*` operator:
 
-```python
+```python linenums="1"
 s = 'good'
 five_s = s * 5
 print(five_s)
@@ -119,7 +119,7 @@ goodgoodgoodgoodgood
 
 The `*` operator has made the string look too good! This is a fine demonstration of that ancient adage: "multiplication is repeated addition":
 
-```python
+```python linenums="1"
 s = 'good'
 s * 5 == s + s + s + s + s	# This expression evaluates to True
 ```
@@ -130,7 +130,7 @@ s * 5 == s + s + s + s + s	# This expression evaluates to True
 
 We can compare two strings. To begin with, we have the `==` operator:
 
-```python
+```python linenums="1"
 x = 'python'
 print(x == 'python', x == 'nohtyp')
 ```
@@ -143,7 +143,7 @@ True False
 
 Two strings are equal if and only if both of them represent exactly the same sequence of characters.  Now, consider the following lines of code:
 
-```python
+```python linenums="1"
 print('good' > 'bad')
 print('nine' < 'one' )
 print('a' < 'ab' < 'abc' < 'b')
@@ -169,14 +169,14 @@ Python’s string type uses the Unicode standard for representing characters, wh
 
 Python provides a built-in function called `ord` that returns the code point of any given character. For example:
 
-```python
+```python linenums="1"
 print(ord('a'), ord('b'))
 print(ord('a'), ord('A'))
 ```
 
 The output is:
 
-```python
+```
 97 98
 97 65
 ```
@@ -189,7 +189,7 @@ Now, we clearly see why `'a' < 'b'` returns `True`. This is because the code poi
 
 In Python, the backslash -  `\` - is called the escape character. One of its uses is to represent certain white-space characters such as tabs and newlines. We will look at them one by one using the following examples:
 
-```python
+```python linenums="1"
 print('This is the first sentence.\nThis is the second sentence.')
 ```
 
@@ -202,7 +202,7 @@ This is the second sentence.
 
 `\n` is a newline character. Its effect is to introduce a new line. Note that even though there are two separate characters: `\` and `n`, `\n` is still regarded as a single character. To verify this, execute the following code. You should get 1 as the output.
 
-```python
+```python linenums="1"
 x = '\n'
 print(len(x))
 ```
@@ -239,7 +239,7 @@ Now remove the backslash from the above string and try to print it. You will get
 
 A string is a substring of another string if the first string is contained in the second. For example, `'good'` is a substring of `'very good'`, whereas `'very good'` is not a substring of `'verygood'`. Python provides a keyword - `in` - which can be used to check if a given string is a substring of another string. For example:
 
-```python
+```python linenums="1"
 a = 'good'
 b = 'very good'
 present = a in b
@@ -257,7 +257,7 @@ False
 
 `in` is a powerful keyword which has several other uses. It can also be used along with `not` in the following manner:
 
-```python
+```python linenums="1"
 a = 'abc'
 b = 'ab'
 print(a not in b)

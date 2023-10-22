@@ -92,7 +92,7 @@ The interpreter throws a `TypeError`. The message accompanying the error is more
 
 The next exception that we will frequently encounter is `NameError`. 
 
-```python
+```python linenums="1"
 print('There is no problem with this line')
 print(x ** 2)
 ```

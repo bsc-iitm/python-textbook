@@ -8,11 +8,12 @@ A library is a collection of functions that share a common theme. This is a loos
 
 Consider the following problem:
 
-> In the year $3000$, $15^{\text{th}}$​ August will fall on which day of the week?
+!!! question " "
+    In the year $3000$, $15^{\text{th}}$​ August will fall on which day of the week?
 
 Python to the rescue:
 
-```python
+```python linenums="1"
 import calendar
 calendar.prmonth(3000, 8)
 ```
@@ -33,7 +34,7 @@ Mo Tu We Th Fr Sa Su
 
 `calendar` is a collection of functions that are related to calendars. `#!py prmonth()` is one such function. It accepts `<year>` and `<month>`, as input and displays the calendar for `<month>` in the year `<year>`. If we want to use a function in `calendar`, we must first import the library. Let us see what happens if skip this step:
 
-```python
+```python linenums="1"
 # import calendar
 calendar.prmonth(3000, 8)
 ```
@@ -41,6 +42,8 @@ calendar.prmonth(3000, 8)
 It gives the following error:
 
 ```pycon
+Traceback (most recent call last):
+  File "<stdin>", line 2, in <module>
 NameError: name 'calendar' is not defined
 ```
 
@@ -52,7 +55,7 @@ To access a function defined inside a library, we use the following syntax:
 
 Another way to solve the problem is to use the function `weekday`:
 
-```python
+```python linenums="1"
 import calendar
 print(calendar.weekday(3000, 8, 15))
 ```
@@ -69,18 +72,16 @@ The output of the above code is `4`. Days are mapped to numbers as follows:
 | Saturday  | 5      |
 | Sunday    | 6      |
 
-
-
 ### `time`
 
 Let us now try to answer this hypothetical question:
 
-!!! question "Problem" 
+!!! question " " 
     You are stranded on an island in the middle of the Indian Ocean. The island has a computing device that has just one application installed in it: a Python interpreter. You wish to know the current date and time.
 
 **Solution**
 
-```python
+```python linenums="1"
 from time import ctime
 print('The current time is:', ctime())
 ```
@@ -93,7 +94,7 @@ The current time is: Fri Apr  2 12:24:43 2021
 
 The syntax of the import statement in line-1 looks different. `from` is a new keyword. The first line of the code is essentially doing the following: from the library called `time` import the function called `ctime`. This way of importing functions is useful when we need just one or two functions from a given library:
 
-```python
+```python linenums="1"
 from time import ctime, sleep
 print('Current time is:', ctime())
 print('I am going to sleep for 10 seconds')
@@ -109,7 +110,7 @@ print('Current time is:', ctime())
 
 As a fun exercise, consider the following code:
 
-```
+```python
 import this
 ```
 
@@ -139,7 +140,6 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
-These are some nuggets of wisdom from Tim Peters, a "major contributor to the Python programming language" [refer](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)). Some of the points make immediate sense, such as "readability counts".
+These are some nuggets of wisdom from Tim Peters, a "major contributor to the Python programming language" [^1]. Some of the points make immediate sense, such as "readability counts".
 
-
-
+[^1]: [The brain behind the Zen](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer))
