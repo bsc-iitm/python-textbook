@@ -1,6 +1,6 @@
 # Lesson-3.5
 
-## Library
+## Library (Continued)
 
 We will look at two more libraries — `math` and `random` — and use them to solve some fascinating problems in mathematics.
 
@@ -24,7 +24,7 @@ for n in range(1, 6):
 
 If we execute the above code, we get the following output:
 
-``` linenums="1"
+```
 n = 1, x_n = 1.414
 n = 2, x_n = 1.848
 n = 3, x_n = 1.962
@@ -54,7 +54,7 @@ for n in range(1, 20):
 print(x)
 ```
 
-After just 20 iterations, the value is so close to two: `#!py 1.9999999999910236`. But we have used trial and error to decide when to terminate the iteration. A better way to do this is to define a tolerance: if the difference between the previous value and the current value in the sequence is less than some predefined value (tolerance), then we terminate the iteration.
+After just 20 iterations, the value is so close to two: `#!py 1.9999999999910236`. But we have used trial and error to decide when to terminate the iteration. A better way to do this is to define a _tolerance_: if the difference between the previous value and the current value in the sequence is less than some predefined value (tolerance), then we terminate the iteration.
 
 ```python linenums="1"
 import math
@@ -64,11 +64,16 @@ while abs(x_curr - x_prev) >= tol:
     x_prev = x_curr
     x_curr = math.sqrt(2 + x_prev)
     count += 1
-print(f'Value of x at {tol} tolerance is {x_curr}')
+print(f'Value of x at {tol:.5f} tolerance is {x_curr}')
 print(f'It took {count} iterations')
 ```
 
+The output of the above code would be:
 
+```
+Value of x at 0.00001 tolerance is 1.9999976469034038
+It took 9 iterations
+```
 
 ### `random`
 
@@ -79,11 +84,13 @@ import random
 print(random.choice('HT'))
 ```
 
-That is all there is to it! `random` is a library and `#!py choice()` is a function defined in it. It accepts any sequence as input and returns an element chosen at random from this sequence. In this case, the input is a string, which is nothing but a sequence of characters.
+That is all there is to it! `random` is a library and `#!py choice()` is a function defined in it. It accepts any sequence as input and returns an element chosen at random from this sequence. In this case, the input is a string, which is nothing but a sequence of characters and each time the code is run we get either of these characters, `H` or `T`.
 
-We know that the probability of obtaining a head on a coin toss is 0.5. This is the theory. Is there a way to see this rule in action? Can we computationally verify if this is indeed the case? For that, we have to set up the following experiment. Toss a coin $n$ times and count the number of heads. Dividing the total number of heads by $n$ will give the empirical probability. As $n$ becomes large, this probability must approach 0.5.
+We know that the probability of obtaining a head on a coin toss is 0.5. Atleast that's what theory says. Is there a way to see this rule in action? Can we computationally verify if this is indeed the case? For this, we need to set up an experiment: toss a coin $n$ times and count the number of heads. Dividing the total number of heads by $n$ will give the _empirical probability[^1]_. As $n$ becomes larger and larger, this probability must approach 0.5.
 
-```python
+[^1]: Simply put [empirical probability](https://en.wikipedia.org/wiki/Empirical_probability) gives the likelihood of an event to occur based on past or historical data.
+
+```python linenums="1"
 import random
 n = int(input())
 heads = 0
@@ -107,12 +114,12 @@ Let us run the above code for different values of $n$ and tabulate our results:
 | 1,000,000 | 0.499983 |
 </div>
 
-The value is approaching `#!py 0.5` as expected! `random` is quite versatile.
+The value is indeed approaching `#!py 0.5` as expected!
 
 <!-- Replace this code block with a repl -->
 
-!!! question "Exercise"
-    Let us now roll a dice! `randint(a, b)` returns a random integer $N$ such that $a \leq N \leq b$. 
+!!! question "Practice Problem"
+    Let us now try to simulate a die roll! `random.randint(a, b)` returns a random integer $N$ such that $a \leq N \leq b$. 
 
     ```python
     import random
