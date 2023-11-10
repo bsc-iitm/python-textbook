@@ -25,7 +25,7 @@ print(isRight(5, 4, 3)) # 5 is passed to x, 4 is passed to y, 3 is passed to z
 
 The output is:
 
-``` linenums="1"
+```
 True
 False
 ```
@@ -43,7 +43,7 @@ isRight(3, 4, 5, 6)
 
 ### Keyword arguments
 
-Keyword arguments introduce more flexibility while passing arguments. Let us take up the same problem that we saw in the previous section and just modify the function calls:
+Keyword arguments introduce more flexibility while passing arguments. Let's take the same example from the previous section and tweak the function call a bit:
 
 ```python linenums="1"
 # The following is just a function call.
@@ -60,7 +60,7 @@ isRight(x = 3, y = 4, z = 5) # same as intended call
 isRight(z = 5, y = 4, x = 3) # same as intended call
 ```
 
-Keyword arguments and positional arguments can be combined in a single call:
+Keyword arguments and positional arguments can also be combined in a single call:
 
 ```python
 isRight(3, y = 4, z = 5)
@@ -74,7 +74,7 @@ isRight(x = 3, 4, 5)
 #### Alarm! Wrong code snippet! ####
 ```
 
-The interpreter throws a `TypeError` with the following message: `positional argument follows keyword arguments`. That is, in our function call, the positional arguments — `#!py 4` and `#!py 5` — come after the keyword argument `#!py x = 3`. Why does the interpreter objects to this? Whenever both positional and keyword arguments are present in a function call, the keyword arguments must always come at the end. This is quite reasonable: positional arguments are extremely sensitive to position, so it is best to have them at the beginning.
+The interpreter throws a `TypeError` with the following message: `positional argument follows keyword arguments`. That is, in our function call, the positional arguments — `#!py 4` and `#!py 5` — come after the keyword argument `#!py x = 3`. Why does the interpreter object to this? Whenever both positional and keyword arguments are present in a function call, the keyword arguments must always come at the end. This is quite reasonable: positional arguments are extremely sensitive to position, so it is best to have them at the beginning.
 
 How about the following call?
 
@@ -84,7 +84,7 @@ isRight(3, x = 3, y = 4, z = 5)
 #### Alarm! Wrong code snippet! ####
 ```
 
-The interpreter objects by throwing a `TypeError` with the following message: `isRight() got multiple values for argument x`. Objection granted! Another reasonable requirement from the Python interpreter: there must be exactly one argument in the function call for each parameter in the function definition, nothing more, nothing less. This could be a positional argument or a default argument, but not both.
+The interpreter objects by throwing a `TypeError` with the following message: `isRight() got multiple values for argument x`. Objection granted! Another reasonable requirement from the Python interpreter: there must be exactly one argument in the function call for each parameter in the function definition, nothing more, nothing less. This could be a positional argument or a keyword argument, but not both.
 
 
 
@@ -100,7 +100,7 @@ Consider the following scenario. The image that you see here is a map of your ne
 
 Let us say that a self-driving car startup operating in your neighborhood uses both these metrics while computing distances. Assume that its code base invokes the Euclidean distance 10 times and the Manhattan distance 1000 times. Since these metrics are used repeatedly, it is a good idea to represent them as functions in the code base:
 
-```python
+```python linenums="1"
 # Assume that O is the origin
 # All distances are computed from the origin
 def euclidean(x, y):
@@ -112,7 +112,7 @@ def manhattan(x, y):
 
 While the above code is fine, it ignores the fact that the Manhattan distance is being used hundred times more frequently compared to the Euclidean distance. Default arguments can come in handy in such situations:
 
-```python
+```python linenums="1"
 def distance(x, y, metric = 'manhattan'):
     if metric == 'manhattan':
         return abs(x) + abs(y)
@@ -126,7 +126,7 @@ The parameter `metric` has `#!py 'manhattan'` as the default value. Let us try c
 print(distance(3, 4))
 ```
 
-This gives `7` as the output. Since no value was provided in the function call, the default value of `#!py 'manhattan'` was assigned to the `metric` parameter. In the code base, wherever the Manhattan distance is invoked, we can just replace it with the function call `distance(x, y)`.
+This gives `7` as the output. Since no value was passed to the `metric` parameter in the function call, the default value of `#!py 'manhattan'` was assigned to it. Now, in the code base, wherever the Manhattan distance is invoked, we can just replace it with the function call `distance(x, y)`.
 
 The following points are important to keep in mind:
 
@@ -147,15 +147,15 @@ def distance(metric = 'manhattan', x, y):
 #### Alarm! Wrong code snippet! ####
 ```
 
-The above code throws a `SyntaxError` with the following message: `non-default argument follows default argument`. In the function definition, the default parameter must always come at the end of the list of parameters. Now, for different ways of passing arguments in the presence of default parameters:
+The above code throws a `SyntaxError` with the following message: `non-default argument follows default argument`. In a function definition, the default parameters must always come at the end of the list of parameters. Now, for different ways of passing arguments in the presence of default parameters:
 
-```python
+```python linenums="1"
 distance(3, 4)
 distance(3, 4, 'manhattan')
 distance(3, 4, metric = 'manhattan')
 ```
 
-All three function calls are equivalent. The first one uses default value of `metric`. The second call explicitly passes `'manhattan'` as the metric using a positional argument. The last call explicitly passes `'manhattan'` as a keyword argument.
+All three function calls above are equivalent. The first one uses default value of `metric`. The second call explicitly passes `#!py 'manhattan'` as the metric using a positional argument. The last call explicitly passes `#!py 'manhattan'` as a keyword argument.
 
 
 
@@ -193,7 +193,7 @@ x = 10
 x_squared = square(x)
 ```
 
-We are using the same name for both the parameter of the function `square` and the argument passed to it. This is a bad practice. It is always preferable to differentiate the names of the parameters from the names of the arguments that are passed in the function call. This avoids confusion and makes code more readable. At this stage, you might be wondering how the variable `x` inside the function is related to the variable `x` outside it. This issue will be taken up in the next lesson on scopes. The above code could be rewritten as follows:
+We are using the same name for both the parameter of the function `square` and the argument passed to it. This is a bad practice. It is always preferable to differentiate the names of the parameters from the names of the arguments that are passed in the function call. This avoids ambiguity and makes code more readable. At this stage, you might be wondering how the variable `x` inside the function is related to the variable `x` outside it. This issue will be taken up in the next lesson on scopes. The above code could be rewritten as follows:
 
 ```python linenums="1"
 def square(num):
