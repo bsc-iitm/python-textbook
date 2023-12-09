@@ -44,9 +44,9 @@ print(count)
 The basic idea behind the solution is as follows:
 
 - The outer for loop goes through each element in the sequence $2, 3, ..., n$. `i` is the loop variable for this sequence.
-- We begin with the guess that `i` is prime. In code, we do this by setting `flag` to be `True`.
+- We begin with the assumption that `i` is prime. In code, we do this by setting `flag` to be `True`.
 - Now, we go through all potential divisors of `i`. This is represented by the sequence $2, 3, ..., i - 1$. Variable `j` is the loop variable for this sequence. Notice how the sequence for the inner loop is dependent on `i`, the loop variable for the outer loop.
-- If `j` divides `i` at some point, then `i` cannot be a prime. We correct our initial assumption by updating `flag` to `False` whenever this happens. As we know that `i` is not prime, there is no use of continuing with the inner-loop, so we break out of it.
+- If `j` divides `i` for some value of `j`, then `i` cannot be a prime. We correct our initial assumption by updating `flag` to `False` whenever this happens. As we know that `i` is not prime, there is no use of continuing with the inner-loop, so we break out of it.
 - If `j` doesn't divide `i` for any `j` in this sequence, then `i` is a prime. In such a situation, our initial assumption is right, and `flag` stays `True`.
 - Once we are outside the inner-loop, we check if `flag` is `True`. If this is the case, then we increment count as we have hit upon a prime number.
 
