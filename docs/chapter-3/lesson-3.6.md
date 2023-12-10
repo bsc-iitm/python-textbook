@@ -18,7 +18,7 @@ $$
 a_n = \left( \sqrt{2} - 1 \right)^n
 $$
 
-As $n$ becomes very large, the values in this sequence will become smaller and smaller. This is because, if you keep multiplying a fraction with itself, it becomes smaller and smaller. In mathematical terms, the limit of this sequence as $n$ tends to infinity is zero. Let us verify this programmatically:
+As $n$ becomes very large, the values in this sequence will become smaller and smaller. This is because, if you keep multiplying a fraction with itself, it keeps getting smaller. In mathematical terms, the limit of this sequence as $n$ tends to infinity is zero. Let us verify this programmatically:
 
 <!-- Replace this with a repl -->
 
@@ -40,29 +40,33 @@ Now, here is another fact. For every number $n$, there are unique integers $x$ a
 $$
 (\sqrt{2} - 1)^n = x + y \cdot \sqrt{2}
 $$
-For $n = 1$, this is obvious: $x = -1, y = 1$. What about higher values of $n$? . We can prove this using mathematical induction. The following is a sketch of the inductive proof. If $(\sqrt{2} - 1)^n = x_n + y_n \cdot \sqrt{2}$, then:
-$$
-(\sqrt{2} - 1)^{n + 1} = (x_n + y_n \cdot \sqrt{2}) \cdot (\sqrt{2} - 1)\\
-= (2y_n - x_n) + (x_n - y_n) \cdot \sqrt{2}\\
-= x_{n + 1} + y_{n + 1} \cdot \sqrt{2}
-$$
-The equation given above defines what is called a recurrence relation: each new term in the sequence is a function of the preceding terms. In this sequence we have $x_1 = -1, y_1 = 1$. For $n > 0$, the pair of equations given below forms the recurrence relation:
+For $n = 1$, this is obvious: $x = -1, y = 1$. What about higher values of $n$? . We can prove this using mathematical induction. The following is a sketch of the inductive proof. If we have that $(\sqrt{2} - 1)^n = x_n + y_n \cdot \sqrt{2}$, then:
+
 $$
 \begin{align}
-x_{n + 1} &= 2 y_n - x_n\\
+(\sqrt{2} - 1)^{n + 1} &= (x_n + y_n \cdot \sqrt{2}) \cdot (\sqrt{2} - 1) \\
+&= (2y_n - x_n) + (x_n - y_n) \cdot \sqrt{2} \\
+&= x_{n + 1} + y_{n + 1} \cdot \sqrt{2}
+\end{align}
+$$
+
+The equation given above defines what is called a recurrence relation: each new term in the sequence is a function of it's preceding term (or terms). In this sequence we have $x_1 = -1, y_1 = 1$. For $n > 0$, the pair of equations given below forms the recurrence relation:
+
+$$
+\begin{align}
+x_{n + 1} &= 2 y_n - x_n \\
 y_{n + 1} &= x_n - y_n
 \end{align}
 $$
+
 Loops are useful tools when it comes to computing terms in such sequences:
 
-```python
+```python linenums="1"
 n = int(input())	# sequence length
 x_n, y_n = -1, 1	# x_1 and y_1
 for i in range(n - 1):
     x_n, y_n = 2 * y_n - x_n, x_n - y_n
 ```
-
-
 
 ### Rational Approximation
 
@@ -74,4 +78,4 @@ As $n$ becomes large, this approximation will become increasingly accurate. For 
 $$
 \frac{228725309250740208744750893347264645481}{161733217200188571081311986634082331709}
 $$
-Is any of this useful? I don't know. But honestly, who cares? We don't do things because they are useful. We do them because they are interesting. And all interesting things will find their use at some point of time in the future.
+Is any of this useful? Well, not all things we learn need to be useful. Sometimes we learn things just because they seem interesting and because we are curious. _And sometimes curiosity might just be the spark that ignites innovation._

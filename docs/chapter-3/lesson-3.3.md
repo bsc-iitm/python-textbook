@@ -44,26 +44,26 @@ print(count)
 The basic idea behind the solution is as follows:
 
 - The outer for loop goes through each element in the sequence $2, 3, ..., n$. `i` is the loop variable for this sequence.
-- We begin with the guess that `i` is prime. In code, we do this by setting `flag` to be `True`.
+- We begin with the assumption that `i` is prime. In code, we do this by setting `flag` to be `True`.
 - Now, we go through all potential divisors of `i`. This is represented by the sequence $2, 3, ..., i - 1$. Variable `j` is the loop variable for this sequence. Notice how the sequence for the inner loop is dependent on `i`, the loop variable for the outer loop.
-- If `j` divides `i`, then `i` cannot be a prime. We correct our initial assumption by updating `flag` to `False` whenever this happens. As we know that `i` is not prime, there is no use of continuing with the inner-loop, so we break out of it.
+- If `j` divides `i` for some value of `j`, then `i` cannot be a prime. We correct our initial assumption by updating `flag` to `False` whenever this happens. As we know that `i` is not prime, there is no use of continuing with the inner-loop, so we break out of it.
 - If `j` doesn't divide `i` for any `j` in this sequence, then `i` is a prime. In such a situation, our initial assumption is right, and `flag` stays `True`.
-- Once we are outside the inner-loop, we check if `flag` is `True`. if that is the case, then we increment count as we have hit upon a prime number.
+- Once we are outside the inner-loop, we check if `flag` is `True`. If this is the case, then we increment count as we have hit upon a prime number.
 
 Some important points regarding nested loops:
 
 - Nesting is not restricted to `#!py for` loops. Any one of the following combinations is possible:
-  - `#!py for` inside `#!py for`
-  - `#!py for` inside `#!py while`
-  - `#!py while` inside `#!py while`
-  - `#!py while` inside `#!py for`
+    - `#!py for` inside `#!py for`
+    - `#!py for` inside `#!py while`
+    - `#!py while` inside `#!py while`
+    - `#!py while` inside `#!py for`
 - Multiple levels of nesting is possible.
 
 
 
 ## `#!py while` versus `#!py for`
 
-`#!py for` loops are typically used in situations where the number of iterations can be quantified, whereas `#!py while` loops are used in situations where the number of iterations cannot be quantified exactly. This doesn't mean that the number of iterations in a `#!py for` loop is always constant. For example:
+`#!py for` loops are typically used in situations where the number of iterations can be quantified and is known in advance, whereas `#!py while` loops are used in situations where the number of iterations cannot be quantified exactly. This doesn't mean that the number of iterations in a `#!py for` loop is always constant. For example:
 
 ```python linenums="1"
 n = int(input())
@@ -83,7 +83,7 @@ The number of iterations in the above code can be determined only after it termi
 
 
 
-## print: `end`, `sep`
+## `#!py print:` `end`,`sep`
 
 ### `end`
 
@@ -98,7 +98,7 @@ For a given value of `n`, say `n` = 9, we want the output to be:
 1,2,3,4,5,6,7,8,9
 ```
 
-The following solution won't work:
+Here's an attempt at solving this using the concepts learnt so far
 
 ```python linenums="1"
 n = int(input())
@@ -106,9 +106,9 @@ for i in range(1, n + 1):
     print(i, ',')
 ```
 
-For `n` = 9, this will give the following output:
+For `n` = 9, this will give the following output, certainly not what we need:
 
-``` linenums="1"
+```
 1 ,
 2 ,
 3 ,
@@ -135,7 +135,9 @@ For `n` = 9, this will give the required output:
 1,2,3,4,5,6,7,8,9
 ```
 
-Whenever we use the `#!py print()` function, it prints the expression passed to it and immediately follows it up by printing a newline. This is the default behaviour of `#!py print()`. It can be altered by using a special argument called `end`. The default value of `end` is set to the newline character. So, whenever the end argument is not explicitly specified in the print function, a newline is appended to the input expression by default. In the code given above, by setting `end` to be a comma, we are forcing the `#!py print()` function to insert a comma instead of a newline at the end of the expression passed to it. It is called `end` because it is added at the end. To get a better picture, consider the following code:
+Whenever we use the `#!py print()` function, it prints the expression passed to it and immediately follows it up by printing a newline. This is the default behaviour of `#!py print()`. It can be altered by using a special argument called `end`. The default value of `end` is set to the newline character `#!py \n`[^1]. So, whenever the end argument is not explicitly specified in the print function, a newline is appended to the input expression by default. In the code given above, by setting `end` to be a comma, we are forcing the `#!py print()` function to insert a comma instead of a newline at the end of the expression passed to it. It is called `end` because it is added at the end. To get a better picture, consider the following code:
+
+[^1]: Remember [escape characters](../chapter-1/lesson-1.5.md/#escape-characters) from chapter 1?
 
 ```python linenums="1"
 print()
@@ -148,13 +150,13 @@ print(3, end = ',')
 
 This output is:
 
-``` linenums="1"
-
+```
+⠀
 ,1
 1,2,3,
 ```
 
-Even though nothing is being passed to the print function in the first line of code, the first line in the output is a newline because the default value of `end` is a newline character (`'\n'`). No expression is passed as input to print in the second line of code as well, but `end` is set to `,`. So, only a comma is printed. Notice that line 3 of the code is printed in line 2 of the output. This is because `end` was set to `,` instead of the newline character in line 2 of the code.
+Even though nothing is being passed to the print function in the first line of code, the first line in the output is a newline because the default value of `end` is the newline character `\n`. No expression is passed as input to print in the second line of code either, but `end` is set to `,`. So, only a comma is printed. Notice that line 3 of the code is printed in line 2 of the output. This is because `end` was set to `,` instead of the newline character in line 2 of the code.
 
 
 
@@ -172,7 +174,7 @@ The output is:
 this is cool
 ```
 
-What if we do not want the space or if want some other separator? This can be done using `sep`:
+What if we don't want the space or if want some other separator? This can be done using the `sep` arguement:
 
 ```python
 print('this', 'is', 'cool', sep = ',')

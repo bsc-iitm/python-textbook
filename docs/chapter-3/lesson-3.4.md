@@ -88,7 +88,7 @@ for i in range(1, 11):
 
 For an input of 3, this will give the following result:
 
-``` linenums="1"
+```
 Multiplication table for 3
 3 X 1   =    3
 3 X 2   =    6
@@ -106,7 +106,7 @@ The `\t` is a tab character. It has been added before and after the `=`. Remove 
 
 Till now we have passed f-strings to the `#!py print()` function. Nothing stops us from using it to define other string variables:
 
-```python
+```python linenums="1"
 name = input()
 qual = input()
 gender = input()
@@ -125,14 +125,14 @@ Try to guess what this code is doing.
 
 Another way to format strings is using a string method called `#!py format()`.
 
-```python
+```python linenums="1"
 name = input()
 print('Hi, {}!'.format(name))
 ```
 
 In the above string, the curly braces will be replaced by the value of the variable `name`.  Another example:
 
-```python
+```python linenums="1"
 l, b = int(input()), int(input())
 print('The length of the rectangle is {} units'.format(l))
 print('The breadth of the rectangle is {} units'.format(b))
@@ -157,7 +157,7 @@ fruit2 = 'banana'
 print('{} and {} are fruits'.format(fruit1, fruit2))
 ```
 
-In this code, the mapping is implicit. The first pair of curly braces is mapped to the first argument and so on. This can be made explicit by specifying which argument a particular curly braces will be mapped to:
+In this code, the mapping is implicit. The first pair of curly braces is mapped to the first argument and so on. This can be made explicit by specifying which argument a particular pair of curly braces will be mapped to:
 
 ```python linenums="1"
 fruit1 = 'apple'
@@ -208,12 +208,12 @@ The value of pi is approximately 3.14
 Let us look at the content inside the curly braces: `{pi_approx:.2f}`. The first part before the `:` is the variable. Nothing new here. The part after `:` is called a format specifier. `.2f` means the following:
 
 - `.`  -  this signifies the decimal point.
-- `2`  -  since this comes after the decimal point, it stipulates that there should be exactly two numbers after the decimal point. In other words, the value (`pi_approx`) should be rounded off to two decimal places.
+- `2`  -  since this comes after the decimal point, it stipulates that there should be exactly two numbers after the decimal point. In other words, the value `pi_approx` should be rounded off to two decimal places.
 - `f`  -  this signifies that we are dealing with a `float` value.
 
 Let us consider a variant of this code:
 
-```python
+```python linenums="1"
 pi_approx = 22 / 7
 print(f'The value of pi is approximately {pi_approx:.3f}')
 ```
@@ -243,7 +243,7 @@ BSC1002: 100
 BSC1003: 90.15
 ```
 
-While this is not bad, we would like the marks to be right aligned and have a uniform representation for the marks. The following code helps us achieve this:This is what we wish to see:
+While this is not bad, it would look a tad bit cleaner if we could get the marks to be right aligned. The following code helps us achieve this:
 
 ```python linenums="1"
 roll_1, marks_1 = 'BSC1001', 90.5
@@ -256,18 +256,16 @@ print(f'{roll_3}: {marks_3:10.2f}')
 
 The output of the above code will be:
 
-``` linenums="1"
+```
 BSC1001:      90.50
 BSC1002:     100.00
 BSC1003:      90.15
 ```
 
-This is much more neater. 
 
+As seen above we get a number of spaces before the floating point values and the values themselves are now right aligned. Let's take a closer look at the contents of the second pair of curly braces: `{marks_1:10.2f}`. The part before the `:` as before is the variable. The part after the `:` is `10.2f`. Here again, `.2f` signifies that the float value should be rounded off to two decimal places. The `10` before the decimal point is the minimum width of the column used for printing this value. If the number has fewer than 10 characters (including the decimal point), this will be compensated by adding spaces before the number.
 
-The part that might be confusing is the second curly braces in each of the print statements. Let us take a closer look: `{marks_1:10.2f}`. The part before the `:` is the variable. The part after the `:` is `10.2f`. Here again, `.2f` signifies that the float value should be rounded off to two decimal places. The `10` before the decimal point is the minimum width of the column used for printing this value. If the number has fewer than 10 characters (including the decimal point), this will be compensated by adding spaces before the number.
-
-For a better understanding of this concept, let us turn to printing integers with a specific formatting. This time, we will use the `#!py format()` function:
+For a better understanding of this concept, let us turn to printing integers with a specific formatting. This time, we will use the `#!py format()` method:
 
 ```python linenums="1"
 print('{0:5d}'.format(1))
@@ -280,7 +278,7 @@ print('{:5d}'.format(111111))
 
 This gives the following output:
 
-``` linenums="1"
+```
     1
    11
   111
@@ -295,5 +293,6 @@ Points to note in the code:
 - First three print statements have the index of the argument — `0` in this case — before the `:`. Last three statements do not have the index of the argument. In fact there is nothing before the `:`. Both representations are valid.
 - The `5d` after the `:` means that the width of the column used for printing must be at least 5.
 - Lines 1 to 4 have spaces before them as the integer being printed has fewer than five characters.
-
+- Line 5 has exactly five characters, leaving no empty room for spaces.
+- And line 6 obviously has more characters than the specified minimum width and thus is printed as such.
 

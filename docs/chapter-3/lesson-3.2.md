@@ -14,7 +14,7 @@ for i in range(5):
 
 The output is:
 
-``` linenums="1"
+```
 0
 1
 2
@@ -53,7 +53,7 @@ for i in range(10, 100, 2):
     print(i)
 ```
 
-`range(10, 100, 2)` represents the sequence `10, 12, ..., 98`. In general, `range(start, stop, step)` represents the sequence `start, start + step, start + 2 * step, ..., last`, where `last` is the largest element in this sequence that is less than `stop`. This is true when the `step` parameter is positive.
+`#!py range(10, 100, 2)` represents the sequence $10, 12, ..., 98$. In general, `#!py range(start, stop, step)` represents the sequence `start, start + step, start + 2 * step, ..., last` where `last` is the largest element in this sequence that is less than `stop`. This is true when the `step` parameter is positive.
 
 The following are equivalent:
 
@@ -86,7 +86,7 @@ for i in range(10, 5):
 
 The point to note is that neither of these code snippets produces any error. Finally, try executing the following snippet and observe the output.
 
-```python
+```python linenums="1"
 ##### Alarm! Wrong code snippet! #####
 for i in range(0.0, 10.0):
     print(i)
@@ -97,7 +97,7 @@ for i in range(0.0, 10.0):
 
 ### Iterating through Strings
 
-Since a string is a sequence of characters, we can use the `#!py for` loop to iterate through strings. The following code will print each character of the string `x` in one line:
+Since a string is a sequence of characters, we can use the `#!py for` loop to iterate through strings. The following code will print each character of the string `x` in a separate line:
 
 ```python linenums="1"
 word = 'good'
@@ -107,7 +107,7 @@ for char in word:
 
 The output is:
 
-``` linenums="1"
+```
 g
 o
 o
@@ -126,7 +126,7 @@ for char in word:
 
 The output is:
 
-``` linenums="1"
+```
 g occurs at position 1 in the string good
 o occurs at position 2 in the string good
 o occurs at position 3 in the string good
